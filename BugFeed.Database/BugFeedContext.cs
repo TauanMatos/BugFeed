@@ -8,7 +8,7 @@ namespace BugFeed.Database
 {
   public class BugFeedContext : DbContext
   {
-    public BugFeedContext() : base("BugFeedContext")
+    public BugFeedContext() : base("BugFeed")
     { }
 
     public DbSet<Email> Emails { get; set; }

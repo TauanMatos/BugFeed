@@ -112,6 +112,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BugFeed.mdf" />
+    <Content Include="App_Data\BugFeed_log.ldf">
+      <DependentUpon>BugFeed.mdf</DependentUpon>
+    </Content>
     <Content Include="assets\css\app.css" />
     <Content Include="assets\js\app.js" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css" />
@@ -213,7 +217,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
