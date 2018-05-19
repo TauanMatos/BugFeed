@@ -17,5 +17,12 @@ namespace BugFeed.DAL
         loDBContext.SaveChanges();
       }
     }
+    public static Usuario AutenticaUsuario(string asUsername, string asPassword)
+    {
+      using(BugFeedContext loDBContext = new BugFeedContext())
+      {
+        return loDBContext.Usuarios.Where(i => i.Username == asUsername && i.Senha == asPassword).FirstOrDefault();
+      }
+    }
   }
 }

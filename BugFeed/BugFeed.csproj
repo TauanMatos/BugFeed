@@ -151,6 +151,7 @@
     <Content Include="assets\lib\roboto\Roboto-Thin.svg" />
     <Content Include="assets\lib\roboto\Roboto-ThinItalic.svg" />
     <Content Include="assets\css\main.css" />
+    <Content Include="BusinessSignUp.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -164,12 +165,19 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
     <Content Include="Login.aspx" />
-    <Content Include="SignUp.aspx" />
+    <Content Include="UserSignUp.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessSignUp.aspx.cs">
+      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessSignUp.aspx.designer.cs">
+      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,12 +224,12 @@
       <DependentUpon>SplashScreenMasterPage.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="UserSignUp.aspx.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SignUp.aspx.designer.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
+    <Compile Include="UserSignUp.aspx.designer.cs">
+      <DependentUpon>UserSignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

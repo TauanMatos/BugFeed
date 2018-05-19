@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed
 {
-  public partial class SignUp : System.Web.UI.Page
+  public partial class UserSignUp : System.Web.UI.Page
   {
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {

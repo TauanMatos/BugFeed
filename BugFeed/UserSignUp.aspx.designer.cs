@@ -10,7 +10,7 @@
 namespace BugFeed {
     
     
-    public partial class SignUp {
+    public partial class UserSignUp {
         
         /// <summary>
         /// txtNome control.
