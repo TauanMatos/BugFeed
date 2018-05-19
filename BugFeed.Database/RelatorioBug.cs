@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace BugFeed.Database
+{
+  public class RelatorioBug
+  {
+    public int RelatorioBugId { get; set; }
+
+    [Required]
+    public Pesquisador Pesquisador { get; set; }
+
+    [Required]
+    public ProgramaRecompensas Programa { get; set; }
+
+    [Required]
+    [MaxLength(150)]
+    public string Titulo { get; set; }
+
+    [Required]
+    public string Descricao { get; set; }
+
+    [Required]
+    public string Impacto { get; set; }
+
+    [Required]
+    public EstadoRelatorioBug Estado { get; set; }
+
+    public virtual List<ComentarioRelatorio> Comentarios { get; set; }
+  }
+
+  public enum EstadoRelatorioBug
+  {
+    Enviado,
+    [Description("Em Análise")]
+    EmAnalise,
+    [Description("Concluído")]
+    Concluido
+  }
+}
