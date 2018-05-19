@@ -302,6 +302,16 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BugFeed.DAL\BugFeed.DAL.csproj">
+      <Project>{3a658d56-24a9-4458-b270-8f1f11d89a90}</Project>
+      <Name>BugFeed.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugFeed.Database\BugFeed.Database.csproj">
+      <Project>{d4cfc735-af3c-440f-a3e5-154818ae9d55}</Project>
+      <Name>BugFeed.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
