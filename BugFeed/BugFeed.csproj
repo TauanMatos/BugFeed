@@ -159,16 +159,6 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.ttf" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap.css.map" />
-    <Content Include="assets\lib\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="assets\lib\bootstrap\js\bootstrap.js.map" />
-    <Content Include="assets\lib\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -278,6 +268,16 @@
     <Content Include="MasterPages\BaseMasterPage.master" />
     <Content Include="MasterPages\SplashScreenMasterPage.master" />
     <Content Include="MasterPages\DashboardMasterPage.master" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.min.js.map" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
