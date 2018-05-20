@@ -133,7 +133,11 @@
       <DependentUpon>BugFeed.mdf</DependentUpon>
     </Content>
     <Content Include="assets\css\app.css" />
+    <Content Include="assets\img\avatar_example.jpg" />
+    <Content Include="assets\img\Logo%402x.png" />
+    <Content Include="assets\img\Logo.png" />
     <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\main.js" />
     <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.min.js" />
     <Content Include="assets\lib\bootstrap-slider\css\bootstrap-slider.css" />

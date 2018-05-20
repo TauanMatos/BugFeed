@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,13 +12,20 @@ namespace BugFeed.Pages
 {
   public class WebForm : Page
   {
-    protected Panel AlertsPanel { get; private set; }
+    private Panel AlertsPanel { get; set; }
+    private List<Alert> Alerts { get; set; } = new List<Alert>();
 
-    protected override void OnInit(EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
-      base.OnInit(e);
+      base.OnLoad(e);
       this.OnLoadPageControls(e);
       this.ClearAlerts();
+    }
+
+    protected override void OnLoadComplete(EventArgs e)
+    {
+      this.RenderAlerts();
+      base.OnLoadComplete(e);
     }
 
     /// <summary>
@@ -38,24 +46,98 @@ namespace BugFeed.Pages
       this.AlertsPanel = (Panel)this.FindControlRecursive(this.Master, "pnAlerts");
     }
 
-    public bool AddAlert(AlertType type = AlertType.Default, AlertSkin skin = AlertSkin.Success,
-                         string title = "", string message = "", bool dismissible = true)
+    #region Alerts
+
+    /// <summary>
+    /// Adicionar alerta na página
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="skin"></param>
+    /// <param name="title"></param>
+    /// <param name="message"></param>
+    /// <param name="dismissible"></param>
+    /// <returns></returns>
+    public bool AddAlert(string message, AlertType type = AlertType.Default, AlertSkin skin = AlertSkin.Success, bool dismissible = true)
     {
       if (this.AlertsPanel == null)
         return false;
 
-      Alert alert = (Alert)this.LoadControl("~/Controls/Elements/Alert.ascx");
-
-      alert.Type = type;
-      alert.Skin = skin;
-      alert.Title = title;
-      alert.Message = message;
-      alert.Dismissible = dismissible;
-
-      this.AlertsPanel.Controls.Add(alert);
+      this.Alerts.Add(new Alert
+      {
+        Type = type,
+        Skin = skin,
+        Message = message,
+        Dismissible = dismissible
+      });
 
       return true;
     }
+
+    /// <summary>
+    /// Adicionar alerta de erro
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns></returns>
+    public bool AddErrorAlert(string message)
+    {
+      return this.AddAlert(message, skin: AlertSkin.Danger);
+    }
+
+    /// <summary>
+    /// Adicionar alerta primário
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns></returns>
+    public bool AddPrimaryAlert(string message)
+    {
+      return this.AddAlert(message, skin: AlertSkin.Primary);
+    }
+
+    /// <summary>
+    /// Adicionar alerta primário
+    /// </summary>
+    /// <param name="message"></param>
+    /// <returns></returns>
+    public bool AddWarningAlert(string message)
+    {
+      return this.AddAlert(message, skin: AlertSkin.Warning);
+    }
+
+    /// <summary>
+    /// Renderizar alertas na tela
+    /// </summary>
+    private void RenderAlerts()
+    {
+      foreach (var group in this.Alerts.GroupBy(a => a.Skin))
+      {
+        Alert alert = (Alert)this.LoadControl("~/Controls/Elements/Alert.ascx");
+
+        alert.Skin = group.Key;
+
+        if (group.Count() > 1)
+        {
+          StringBuilder builder = new StringBuilder();
+          builder.Append("<ul>");
+          group.ToList().ForEach(a =>
+          {
+            builder.Append(String.Format("<li>{0}</li>", a.Message));
+          });
+          builder.Append("</ul>");
+          alert.Message = builder.ToString();
+        }
+        else
+        {
+          Alert alertObj = group.First();
+          alert.Message = alertObj.Message;
+          alert.Dismissible = alertObj.Dismissible;
+          alert.Type = alertObj.Type;
+        }
+        
+        this.AlertsPanel.Controls.Add(alert);
+      }
+    }
+
+    #endregion Alerts
 
     public Control FindControlRecursive(Control container, string name)
     {
@@ -69,6 +151,21 @@ namespace BugFeed.Pages
           return foundCtrl;
       }
       return null;
+    }
+
+    protected bool IsFormValid(string validationGroup = null)
+    {
+      this.Validate();
+
+      List<IValidator> notValidValidators = (string.IsNullOrWhiteSpace(validationGroup) ? this.Validators : this.GetValidators(validationGroup))
+        .Cast<IValidator>().ToList().FindAll(v => !v.IsValid);
+
+      notValidValidators.ForEach(v =>
+      {
+        this.AddAlert(skin: AlertSkin.Danger, message: v.ErrorMessage);
+      });
+
+      return notValidValidators.Count == 0;
     }
   }
 }
