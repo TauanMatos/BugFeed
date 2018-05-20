@@ -27,7 +27,7 @@ namespace BugFeed
       if (loUsuario != null)
         this.Session["Usuario"] = loUsuario;
       else
-        this.AddAlert(skin: AlertSkin.Success, title: "Erro!", message: "Usuário ou senha incorretos.");
+        this.AddAlert(skin: AlertSkin.Danger, title: "Erro!", message: "Usuário ou senha incorretos.");
     }
 
     private string RetonarHash()
