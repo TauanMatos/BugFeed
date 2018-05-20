@@ -55,7 +55,7 @@ namespace BugFeed.SignUp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::BugFeed.Controls.Elements.TextBoxPassword txtPassword;
         
         /// <summary>
         /// txtConfirmaSenha control.
@@ -64,16 +64,16 @@ namespace BugFeed.SignUp {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfirmaSenha;
+        protected global::BugFeed.Controls.Elements.TextBoxPassword txtConfirmaSenha;
         
         /// <summary>
-        /// txtDtNascimento control.
+        /// dtDatePicker control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDtNascimento;
+        protected global::BugFeed.Controls.Elements.DatePicker dtDatePicker;
         
         /// <summary>
         /// cbxTermos control.

@@ -118,6 +118,10 @@
     </Content>
     <Content Include="assets\css\app.css" />
     <Content Include="assets\js\app.js" />
+    <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.min.js" />
+    <Content Include="assets\lib\bootstrap-slider\css\bootstrap-slider.css" />
+    <Content Include="assets\lib\bootstrap-slider\css\bootstrap-slider.min.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.css" />
@@ -157,6 +161,8 @@
     <Content Include="assets\lib\select2\css\select2.min.css" />
     <Content Include="assets\lib\select2\js\select2.full.min.js" />
     <Content Include="assets\lib\select2\js\select2.min.js" />
+    <Content Include="Controls\Elements\DatePicker.ascx" />
+    <Content Include="Controls\Elements\TextBoxPassword.ascx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="favicon.ico" />
@@ -176,6 +182,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Elements\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Elements\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Elements\TextBoxPassword.ascx.cs">
+      <DependentUpon>TextBoxPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Elements\TextBoxPassword.ascx.designer.cs">
+      <DependentUpon>TextBoxPassword.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
       <DependentUpon>Business.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,9 +250,7 @@
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="assets\lib\roboto\Roboto-Black.eot" />
     <Content Include="assets\lib\roboto\Roboto-Black.ttf" />
