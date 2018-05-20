@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.Database", "BugFeed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.DAL", "BugFeed.DAL\BugFeed.DAL.csproj", "{3A658D56-24A9-4458-B270-8F1F11D89A90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.Utils", "BugFeed.Utils\BugFeed.Utils.csproj", "{88265547-1752-4370-B836-2E6BE94613D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3A658D56-24A9-4458-B270-8F1F11D89A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A658D56-24A9-4458-B270-8F1F11D89A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A658D56-24A9-4458-B270-8F1F11D89A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88265547-1752-4370-B836-2E6BE94613D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88265547-1752-4370-B836-2E6BE94613D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88265547-1752-4370-B836-2E6BE94613D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88265547-1752-4370-B836-2E6BE94613D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

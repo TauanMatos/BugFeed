@@ -9,9 +9,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BugFeed
+namespace BugFeed.SignUp
 {
-  public partial class UserSignUp : System.Web.UI.Page
+  public partial class User : System.Web.UI.Page
   {
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
@@ -20,31 +20,12 @@ namespace BugFeed
       loPesquisador.Nome = this.txtNome.Text;
       loPesquisador.Username = this.txtUsername.Text;
       loPesquisador.Email = new Email() { Confirmado = false, Endereco = this.txtEmail.Text, Usuario = loPesquisador };
-      loPesquisador.Senha = this.RetonarHash();
+      loPesquisador.Senha = this.txtPassword.Password;
       loPesquisador.Sobrenome = this.txtSobrenome.Text;
       loPesquisador.Ativo = false;
-      loPesquisador.DataNascimento = DateTime.ParseExact(txtDtNascimento.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
-
+      loPesquisador.DataNascimento = this.dtDatePicker.DateTime;
       UsuarioDAL.Insert(loPesquisador);
 
-    }
-
-    private string RetonarHash()
-    {
-      using (MD5 loHash = MD5.Create())
-      {
-        string loPassword = this.txtPassword.Text;
-        byte[] data = loHash.ComputeHash(Encoding.UTF8.GetBytes(loPassword));
-
-        StringBuilder sBuilder = new StringBuilder();
-
-        for (int i = 0; i < data.Length; i++)
-        {
-          sBuilder.Append(data[i].ToString("x2"));
-        }
-
-        return sBuilder.ToString();
-      }
     }
   }
 }

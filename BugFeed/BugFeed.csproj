@@ -134,6 +134,10 @@
     </Content>
     <Content Include="assets\css\app.css" />
     <Content Include="assets\js\app.js" />
+    <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.min.js" />
+    <Content Include="assets\lib\bootstrap-slider\css\bootstrap-slider.css" />
+    <Content Include="assets\lib\bootstrap-slider\css\bootstrap-slider.min.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.css" />
@@ -173,8 +177,14 @@
     <Content Include="assets\lib\select2\css\select2.min.css" />
     <Content Include="assets\lib\select2\js\select2.full.min.js" />
     <Content Include="assets\lib\select2\js\select2.min.js" />
+<<<<<<< HEAD
     <Content Include="BusinessSignUp.aspx" />
     <Content Include="Controls\Elements\Alert.ascx" />
+=======
+    <Content Include="Controls\Elements\DatePicker.ascx" />
+    <Content Include="Controls\Elements\TextBoxPassword.ascx" />
+    <Content Include="SignUp\Business.aspx" />
+>>>>>>> 5ad8eb201805b579c9ba2ea9f11ec1afc1028082
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -188,6 +198,7 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
     <Content Include="Login.aspx" />
+<<<<<<< HEAD
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -210,18 +221,22 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="UserSignUp.aspx" />
+=======
+    <Content Include="SignUp\User.aspx" />
+>>>>>>> 5ad8eb201805b579c9ba2ea9f11ec1afc1028082
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessSignUp.aspx.cs">
-      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    <Compile Include="Controls\Elements\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BusinessSignUp.aspx.designer.cs">
-      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    <Compile Include="Controls\Elements\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Controls\Elements\Alert.ascx.cs">
       <DependentUpon>Alert.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,16 +246,29 @@
     </Compile>
     <Compile Include="Dashboard\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+=======
+    <Compile Include="Controls\Elements\TextBoxPassword.ascx.cs">
+      <DependentUpon>TextBoxPassword.ascx</DependentUpon>
+>>>>>>> 5ad8eb201805b579c9ba2ea9f11ec1afc1028082
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Controls\Elements\TextBoxPassword.ascx.designer.cs">
+      <DependentUpon>TextBoxPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Business.aspx.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
+    <Compile Include="SignUp\Business.aspx.designer.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Dashboard\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -278,12 +306,12 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserSignUp.aspx.cs">
-      <DependentUpon>UserSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserSignUp.aspx.designer.cs">
-      <DependentUpon>UserSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
@@ -370,6 +398,10 @@
     <ProjectReference Include="..\BugFeed.Database\BugFeed.Database.csproj">
       <Project>{d4cfc735-af3c-440f-a3e5-154818ae9d55}</Project>
       <Name>BugFeed.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugFeed.Utils\BugFeed.Utils.csproj">
+      <Project>{88265547-1752-4370-b836-2e6be94613d6}</Project>
+      <Name>BugFeed.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
