@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Cadastro Usuário" Language="C#" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" AutoEventWireup="true" CodeBehind="UserSignUp.aspx.cs" Inherits="BugFeed.UserSignUp" %>
+﻿<%@ Page Title="Cadastro Usuário" Language="C#" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="BugFeed.SignUp.User" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <div class="be-wrapper be-login be-signup">

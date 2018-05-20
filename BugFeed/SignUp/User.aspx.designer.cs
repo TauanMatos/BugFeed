@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BugFeed {
+namespace BugFeed.SignUp {
     
     
-    public partial class UserSignUp {
+    public partial class User {
         
         /// <summary>
         /// txtNome control.

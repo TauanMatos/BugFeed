@@ -9,9 +9,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BugFeed
+namespace BugFeed.SignUp
 {
-  public partial class UserSignUp : System.Web.UI.Page
+  public partial class User : System.Web.UI.Page
   {
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {

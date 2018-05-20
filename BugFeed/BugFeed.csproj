@@ -157,9 +157,8 @@
     <Content Include="assets\lib\select2\css\select2.min.css" />
     <Content Include="assets\lib\select2\js\select2.full.min.js" />
     <Content Include="assets\lib\select2\js\select2.min.js" />
-    <Content Include="BusinessSignUp.aspx" />
+    <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -171,31 +170,24 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
     <Content Include="Login.aspx" />
-    <Content Include="UserSignUp.aspx" />
+    <Content Include="SignUp\User.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessSignUp.aspx.cs">
-      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\Business.aspx.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BusinessSignUp.aspx.designer.cs">
-      <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\Business.aspx.designer.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Dashboard\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -230,12 +222,12 @@
       <DependentUpon>SplashScreenMasterPage.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserSignUp.aspx.cs">
-      <DependentUpon>UserSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserSignUp.aspx.designer.cs">
-      <DependentUpon>UserSignUp.aspx</DependentUpon>
+    <Compile Include="SignUp\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +316,10 @@
     <ProjectReference Include="..\BugFeed.Database\BugFeed.Database.csproj">
       <Project>{d4cfc735-af3c-440f-a3e5-154818ae9d55}</Project>
       <Name>BugFeed.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BugFeed.Utils\BugFeed.Utils.csproj">
+      <Project>{88265547-1752-4370-b836-2e6be94613d6}</Project>
+      <Name>BugFeed.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

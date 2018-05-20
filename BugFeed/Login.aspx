@@ -28,7 +28,7 @@
               </div>
           </div>
         </div>
-        <div class="splash-footer"><span>Não tem uma conta? <a href="UserSignUp.aspx">Criar</a></span></div>
+        <div class="splash-footer"><span>Não tem uma conta? <a href="SignUp/User.aspx">Criar</a></span></div>
       </div>
     </div>
   </div>
