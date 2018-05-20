@@ -13,6 +13,15 @@ namespace BugFeed {
     public partial class Login {
         
         /// <summary>
+        /// upAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upAlerts;
+        
+        /// <summary>
         /// pnAlerts control.
         /// </summary>
         /// <remarks>
