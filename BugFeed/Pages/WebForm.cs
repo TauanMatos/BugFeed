@@ -44,16 +44,15 @@ namespace BugFeed.Pages
       if (this.AlertsPanel == null)
         return false;
 
-      this.AlertsPanel.Controls.Add(
-          new Alert
-          {
-            Type = type,
-            Skin = skin,
-            Title = title,
-            Message = message,
-            Dismissible = dismissible
-          }
-      );
+      Alert alert = (Alert)this.LoadControl("~/Controls/Elements/Alert.ascx");
+
+      alert.Type = type;
+      alert.Skin = skin;
+      alert.Title = title;
+      alert.Message = message;
+      alert.Dismissible = dismissible;
+
+      this.AlertsPanel.Controls.Add(alert);
 
       return true;
     }
