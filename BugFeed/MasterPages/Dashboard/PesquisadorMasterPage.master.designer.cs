@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BugFeed.MasterPages {
+namespace BugFeed.MasterPages.Dashboard {
     
     
-    public partial class DashboardMasterPage {
+    public partial class PesquisadorMasterPage {
         
         /// <summary>
         /// MainContent control.

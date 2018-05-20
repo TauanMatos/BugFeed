@@ -185,6 +185,7 @@
     <Content Include="Controls\Elements\DatePicker.ascx" />
     <Content Include="Controls\Elements\TextBoxPassword.ascx" />
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
+    <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="Default.aspx" />
@@ -254,6 +255,20 @@
     <Compile Include="Controls\CadastroUsuarioControl.ascx.designer.cs">
       <DependentUpon>CadastroUsuarioControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\Pesquisador\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.cs">
+      <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.designer.cs">
+      <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
+    </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
       <DependentUpon>Business.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,11 +304,11 @@
     <Compile Include="MasterPages\BaseMasterPage.master.designer.cs">
       <DependentUpon>BaseMasterPage.master</DependentUpon>
     </Compile>
-    <Compile Include="MasterPages\DashboardMasterPage.master.cs">
+    <Compile Include="MasterPages\Dashboard\DashboardMasterPage.master.cs">
       <DependentUpon>DashboardMasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPages\DashboardMasterPage.master.designer.cs">
+    <Compile Include="MasterPages\Dashboard\DashboardMasterPage.master.designer.cs">
       <DependentUpon>DashboardMasterPage.master</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\SplashScreenMasterPage.master.cs">
@@ -366,7 +381,7 @@
     <Content Include="assets\lib\roboto\Roboto-ThinItalic.woff2" />
     <Content Include="MasterPages\BaseMasterPage.master" />
     <Content Include="MasterPages\SplashScreenMasterPage.master" />
-    <Content Include="MasterPages\DashboardMasterPage.master" />
+    <Content Include="MasterPages\Dashboard\DashboardMasterPage.master" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-grid.min.css.map" />
     <Content Include="assets\lib\bootstrap\css\bootstrap-reboot.css.map" />
@@ -377,6 +392,7 @@
     <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="assets\lib\bootstrap\js\bootstrap.js.map" />
     <Content Include="assets\lib\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="MasterPages\Dashboard\PesquisadorMasterPage.master" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -403,6 +419,9 @@
       <Project>{88265547-1752-4370-b836-2e6be94613d6}</Project>
       <Name>BugFeed.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dashboard\Administrador\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
