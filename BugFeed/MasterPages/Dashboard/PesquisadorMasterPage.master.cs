@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace BugFeed.MasterPages
+namespace BugFeed.MasterPages.Dashboard
 {
-  public partial class DashboardMasterPage : System.Web.UI.MasterPage
+  public partial class PesquisadorMasterPage : System.Web.UI.MasterPage
   {
     protected void Page_Load(object sender, EventArgs e)
     {
