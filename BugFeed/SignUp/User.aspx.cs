@@ -17,13 +17,13 @@ namespace BugFeed.SignUp
     {
 
       Pesquisador loPesquisador = new Pesquisador();
-      loPesquisador.Nome = this.txtNome.Text;
-      loPesquisador.Username = this.txtUsername.Text;
-      loPesquisador.Email = new Email() { Confirmado = false, Endereco = this.txtEmail.Text, Usuario = loPesquisador };
-      loPesquisador.Senha = this.txtPassword.Password;
-      loPesquisador.Sobrenome = this.txtSobrenome.Text;
+      loPesquisador.Nome = this.CadastroUsuario.Nome;
+      loPesquisador.Sobrenome = this.CadastroUsuario.Sobrenome;
+      loPesquisador.Username = this.CadastroUsuario.Username;
+      loPesquisador.Email = new Email() { Confirmado = false, Endereco = this.CadastroUsuario.Email, Usuario = loPesquisador };
+      loPesquisador.Senha = this.CadastroUsuario.Senha;
       loPesquisador.Ativo = false;
-      loPesquisador.DataNascimento = this.dtDatePicker.DateTime;
+      loPesquisador.DataNascimento = this.CadastroUsuario.DataNascimento;
       UsuarioDAL.Insert(loPesquisador);
 
     }
