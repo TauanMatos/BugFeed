@@ -163,6 +163,7 @@
     <Content Include="assets\lib\select2\js\select2.min.js" />
     <Content Include="Controls\Elements\DatePicker.ascx" />
     <Content Include="Controls\Elements\TextBoxPassword.ascx" />
+    <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="favicon.ico" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="Controls\Elements\TextBoxPassword.ascx.designer.cs">
       <DependentUpon>TextBoxPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CadastroUsuarioControl.ascx.cs">
+      <DependentUpon>CadastroUsuarioControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CadastroUsuarioControl.ascx.designer.cs">
+      <DependentUpon>CadastroUsuarioControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
       <DependentUpon>Business.aspx</DependentUpon>
