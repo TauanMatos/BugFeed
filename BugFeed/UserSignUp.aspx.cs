@@ -23,7 +23,7 @@ namespace BugFeed
       loPesquisador.Senha = this.RetonarHash();
       loPesquisador.Sobrenome = this.txtSobrenome.Text;
       loPesquisador.Ativo = false;
-      loPesquisador.DataNascimento = DateTime.ParseExact(txtDtNascimento.Text, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+      loPesquisador.DataNascimento = DateTime.ParseExact(txtDtNascimento.Text, "dd-mm-yyyy", System.Globalization.CultureInfo.InvariantCulture);
 
       UsuarioDAL.Insert(loPesquisador);
 

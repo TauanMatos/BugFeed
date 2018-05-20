@@ -128,6 +128,9 @@
     <Content Include="assets\lib\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="assets\lib\bootstrap\js\bootstrap.js" />
     <Content Include="assets\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\lib\datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="assets\lib\datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\lib\jquery.maskedinput\jquery.maskedinput.js" />
     <Content Include="assets\lib\jquery\jquery.min.js" />
     <Content Include="assets\lib\material-design-icons\css\material-design-iconic-font.css" />
     <Content Include="assets\lib\material-design-icons\css\material-design-iconic-font.min.css" />
@@ -151,6 +154,9 @@
     <Content Include="assets\lib\roboto\Roboto-Thin.svg" />
     <Content Include="assets\lib\roboto\Roboto-ThinItalic.svg" />
     <Content Include="assets\css\main.css" />
+    <Content Include="assets\lib\select2\css\select2.min.css" />
+    <Content Include="assets\lib\select2\js\select2.full.min.js" />
+    <Content Include="assets\lib\select2\js\select2.min.js" />
     <Content Include="BusinessSignUp.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="Default.aspx" />

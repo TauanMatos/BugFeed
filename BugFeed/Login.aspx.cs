@@ -26,8 +26,6 @@ namespace BugFeed
         this.Session["Usuario"] = loUsuario;
       //TODO
       //Exibir mensagem de erro de senha/usuário inválidos
-        
-
     }
 
     private string RetonarHash()
