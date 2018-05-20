@@ -9,11 +9,8 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-<<<<<<< HEAD
 using static BugFeed.Controls.Elements.Alert;
-=======
 using BugFeed.Utils.Extensions;
->>>>>>> 5ad8eb201805b579c9ba2ea9f11ec1afc1028082
 
 namespace BugFeed
 {
