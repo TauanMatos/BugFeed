@@ -158,6 +158,7 @@
     <Content Include="assets\lib\select2\js\select2.full.min.js" />
     <Content Include="assets\lib\select2\js\select2.min.js" />
     <Content Include="BusinessSignUp.aspx" />
+    <Content Include="Controls\Elements\Alert.ascx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="BusinessSignUp.aspx.designer.cs">
       <DependentUpon>BusinessSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Elements\Alert.ascx.cs">
+      <DependentUpon>Alert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Elements\Alert.ascx.designer.cs">
+      <DependentUpon>Alert.ascx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -229,6 +237,9 @@
     <Compile Include="MasterPages\SplashScreenMasterPage.master.designer.cs">
       <DependentUpon>SplashScreenMasterPage.master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\WebForm.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserSignUp.aspx.cs">
       <DependentUpon>UserSignUp.aspx</DependentUpon>
@@ -238,9 +249,7 @@
       <DependentUpon>UserSignUp.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="assets\lib\roboto\Roboto-Black.eot" />
     <Content Include="assets\lib\roboto\Roboto-Black.ttf" />

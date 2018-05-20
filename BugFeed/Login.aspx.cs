@@ -1,5 +1,6 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
+using BugFeed.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,11 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static BugFeed.Controls.Elements.Alert;
 
 namespace BugFeed
 {
-  public partial class Login : System.Web.UI.Page
+  public partial class Login : WebForm
   {
     protected override void OnLoad(EventArgs e)
     {
@@ -24,8 +26,9 @@ namespace BugFeed
       Usuario loUsuario = UsuarioDAL.AutenticaUsuario(this.txtUsername.Text, this.RetonarHash());
       if (loUsuario != null)
         this.Session["Usuario"] = loUsuario;
-      //TODO
-      //Exibir mensagem de erro de senha/usuário inválidos
+      else
+        this.AddAlert(skin: AlertSkin.Danger, title: "Erro!", message: "Usuário ou senha incorretos.");
+      this.upAlerts.Update();
     }
 
     private string RetonarHash()
