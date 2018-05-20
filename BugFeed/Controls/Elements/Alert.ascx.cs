@@ -81,6 +81,25 @@ namespace BugFeed.Controls.Elements
       }
     }
 
+    protected string AlertTitle
+    {
+      get
+      {
+        switch (this.Skin)
+        {
+          default:
+          case AlertSkin.Success:
+            return "Sucesso!";
+          case AlertSkin.Primary:
+            return "Informação!";
+          case AlertSkin.Warning:
+            return "Atenção!";
+          case AlertSkin.Danger:
+            return "Erro!";
+        }
+      }
+    }
+
     #endregion Skin
 
     #region Type

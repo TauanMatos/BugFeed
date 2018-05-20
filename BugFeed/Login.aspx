@@ -3,6 +3,8 @@
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
   <asp:UpdatePanel ID="upAlerts" runat="server">
     <ContentTemplate>
+      <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtUsername" runat="server" ValidationGroup="LoginForm" ErrorMessage="O campo <b>Usuário</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
+      <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtPassword" runat="server" ValidationGroup="LoginForm" ErrorMessage="O campo <b>Senha</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
       <div class="be-wrapper be-login">
         <div class="be-content">
           <div class="main-content container-fluid">

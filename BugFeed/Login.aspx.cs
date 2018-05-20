@@ -16,19 +16,28 @@ namespace BugFeed
 {
   public partial class Login : WebForm
   {
-    protected override void OnLoad(EventArgs e)
-    {
-      base.OnLoad(e);
-      if (this.Session["Usuario"] != null)
-        this.Response.Redirect("Profile.aspx");
-    }
     protected void btnEntrar_Click(object sender, EventArgs e)
     {
-      Usuario loUsuario = UsuarioDAL.AutenticaUsuario(this.txtUsername.Text, this.txtPassword.Text.ToPassword());
-      if (loUsuario != null)
-        this.Session["Usuario"] = loUsuario;
-      else
-        this.AddAlert(skin: AlertSkin.Danger, title: "Erro!", message: "Usuário ou senha incorretos.");
+      if (this.IsFormValid("LoginForm"))
+      {
+        try
+        {
+          Usuario loUsuario = UsuarioDAL.AutenticaUsuario(this.txtUsername.Text, this.txtPassword.Text.ToPassword());
+          if (loUsuario != null)
+          {
+            this.Session.Clear();
+            this.Session["Usuario"] = loUsuario;
+            this.Response.Redirect("Dashboard/Profile.aspx");
+          }
+          else
+            this.AddErrorAlert("Usuário ou senha incorretos.");
+        }
+        catch(Exception ex)
+        {
+          this.AddErrorAlert(ex.Message);
+        }
+      }
     }
+    
   }
 }

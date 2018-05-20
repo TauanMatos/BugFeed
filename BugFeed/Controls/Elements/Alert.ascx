@@ -5,6 +5,7 @@
     <button runat="server" visible="<%# this.Dismissible %>" type="button" data-dismiss="alert" aria-label="Fechar" class="close">
       <span aria-hidden="true" class="mdi mdi-close"></span>
     </button>
-    <strong runat="server" visible="<%# !string.IsNullOrWhiteSpace(this.Title) %>"><%= this.Title %></strong> <%= this.Message %>
+    <b><%= this.AlertTitle %></b>
+    <%= this.Message %>
   </div>
 </div>
