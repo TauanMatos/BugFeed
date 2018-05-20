@@ -13,6 +13,24 @@ namespace BugFeed.SignUp {
     public partial class User {
         
         /// <summary>
+        /// upAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upAlerts;
+        
+        /// <summary>
+        /// pnAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnAlerts;
+        
+        /// <summary>
         /// CadastroUsuario control.
         /// </summary>
         /// <remarks>
