@@ -14,6 +14,9 @@ namespace BugFeed.Database
     [MaxLength(100)]
     public string Site { get; set; }
 
+    [Required]
+    public string Nome { get; set; }
+
     public Endereco Endereco { get; set; }
 
     public string CNPJ { get; set; }

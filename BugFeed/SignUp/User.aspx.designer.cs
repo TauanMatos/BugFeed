@@ -22,6 +22,15 @@ namespace BugFeed.SignUp {
         protected global::BugFeed.Controls.CadastroUsuarioControl CadastroUsuario;
         
         /// <summary>
+        /// cbxTermos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbxTermos;
+        
+        /// <summary>
         /// btnCadastrar control.
         /// </summary>
         /// <remarks>

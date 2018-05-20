@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201805091237291_InitialCreate.Designer.cs">
       <DependentUpon>201805091237291_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805202023093_NomeEmpresa.cs" />
+    <Compile Include="Migrations\201805202023093_NomeEmpresa.Designer.cs">
+      <DependentUpon>201805202023093_NomeEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Pesquisador.cs" />
@@ -77,6 +81,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805091237291_InitialCreate.resx">
       <DependentUpon>201805091237291_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805202023093_NomeEmpresa.resx">
+      <DependentUpon>201805202023093_NomeEmpresa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

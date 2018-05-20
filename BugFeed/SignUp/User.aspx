@@ -10,7 +10,13 @@
               <img src="/assets/img/logo@2x.png" alt="logo" width="102" height="27" class="logo-img"><span class="splash-description">Digite suas informações de usuário.</span>
             </div>
             <div class="card-body">
+              <span class="splash-title pb-4">Cadastro Usuário</span>
               <uc:CadastroUsuario runat="server" ID="CadastroUsuario"></uc:CadastroUsuario>
+              <div class="form-group pt-3 mb-3">
+                <label class="custom-control custom-checkbox">
+                  <asp:CheckBox ID="cbxTermos" runat="server" CssClass="custom-control-input" /><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a>.</span>
+                </label>
+              </div>
               <div class="form-group pt-2">
                 <asp:Button runat="server" ID="btnCadastrar" CssClass="btn btn-block btn-primary btn-xl" Text="Cadastrar" OnClick="btnCadastrar_Click" />
               </div>

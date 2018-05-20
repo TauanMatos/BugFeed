@@ -13,5 +13,10 @@ namespace BugFeed.SignUp
     {
 
     }
+
+    protected void btnCadastrar_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
