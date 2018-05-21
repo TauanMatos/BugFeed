@@ -186,9 +186,9 @@
     <Content Include="Controls\Elements\TextBoxPassword.ascx" />
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
@@ -262,6 +262,13 @@
     <Compile Include="Dashboard\Pesquisador\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.cs">
       <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,9 +280,6 @@
       <DependentUpon>Business.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="SignUp\Business.aspx.designer.cs">
       <DependentUpon>Business.aspx</DependentUpon>
     </Compile>
@@ -283,7 +287,6 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs" />
     <Compile Include="Dashboard\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
