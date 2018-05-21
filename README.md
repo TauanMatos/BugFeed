@@ -1,4 +1,4 @@
-# ![alt text](https://raw.githubusercontent.com/TauanMatos/BugFeed/master/BugFeed/favicon.ico) BugFeed
+# ![alt text](https://raw.githubusercontent.com/TauanMatos/BugFeed/master/Source/BugFeed/favicon.ico) BugFeed
 Esta aplicação visa se tornar uma ponte entre profissionais da área de segurança da informação e empresas que oferecem produtos e 
 serviços online. Nessa plataforma, as empresas podem publicar programas de recompensas por falhas, onde os usuários irão testar seus 
 produtos e reportar qualquer falha encontrada. Após uma análise dessa falha e histórico do profissional que a reportou, a empresa 
