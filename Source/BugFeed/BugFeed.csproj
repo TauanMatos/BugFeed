@@ -133,9 +133,10 @@
       <DependentUpon>BugFeed.mdf</DependentUpon>
     </Content>
     <Content Include="assets\css\app.css" />
-    <Content Include="assets\img\avatar_example.jpg" />
     <Content Include="assets\img\Logo%402x.png" />
     <Content Include="assets\img\Logo.png" />
+    <Content Include="assets\img\avatar_example.jpg" />
+    <Content Include="assets\img\user-profile-display.png" />
     <Content Include="assets\js\app.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\lib\bootstrap-slider\bootstrap-slider.js" />
@@ -186,6 +187,7 @@
     <Content Include="Controls\Elements\TextBoxPassword.ascx" />
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
+    <Content Include="Dashboard\Pesquisador\Profile.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
@@ -261,6 +263,13 @@
     </Compile>
     <Compile Include="Dashboard\Pesquisador\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
