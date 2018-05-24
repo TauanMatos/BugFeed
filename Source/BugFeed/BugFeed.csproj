@@ -214,6 +214,7 @@
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="SignOut.aspx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="favicon.ico" />
@@ -226,7 +227,7 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.ttf" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
-    <Content Include="Login.aspx" />
+    <Content Include="SignIn.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -303,6 +304,13 @@
     <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.designer.cs">
       <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
     </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
       <DependentUpon>Business.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -320,12 +328,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\BaseMasterPage.master.cs">
       <DependentUpon>BaseMasterPage.master</DependentUpon>
@@ -445,10 +453,6 @@
     <ProjectReference Include="..\BugFeed.Database\BugFeed.Database.csproj">
       <Project>{d4cfc735-af3c-440f-a3e5-154818ae9d55}</Project>
       <Name>BugFeed.Database</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BugFeed.Utils\BugFeed.Objects.csproj">
-      <Project>{88265547-1752-4370-b836-2e6be94613d6}</Project>
-      <Name>BugFeed.Objects</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

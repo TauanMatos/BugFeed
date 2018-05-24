@@ -20,37 +20,43 @@ namespace BugFeed.SignUp
   {
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
-      try
+      if (this.IsFormValid("RegisterForm"))
       {
-        Pesquisador loPesquisador = new Pesquisador();
-        loPesquisador.Nome = this.CadastroUsuario.Nome;
-        loPesquisador.Sobrenome = this.CadastroUsuario.Sobrenome;
-        loPesquisador.UserName = this.CadastroUsuario.Username;
-        loPesquisador.Email = this.CadastroUsuario.Email;
-        loPesquisador.Ativo = false;
-        loPesquisador.DataNascimento = this.CadastroUsuario.DataNascimento;
-
-        var userStore = new UserStore<Usuario>(new BugFeedContext());
-        var manager = new UserManager<Usuario>(userStore);
-
-        var result = manager.Create(loPesquisador, this.CadastroUsuario.Senha);
-
-        if (result.Succeeded)
+        try
         {
-          var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-          var userIdentity = manager.CreateIdentity(loPesquisador, DefaultAuthenticationTypes.ApplicationCookie);
-          authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-          Response.Redirect("~/Login.aspx");
-        }
-        else
-        {
-          result.Errors.ToList().ForEach(er => this.AddErrorAlert(er));
-        }
+          using (UnitOfWork unitOfWork = new UnitOfWork())
+          {
+            Pesquisador loPesquisador = new Pesquisador();
+            loPesquisador.Nome = this.CadastroUsuario.Nome;
+            loPesquisador.Sobrenome = this.CadastroUsuario.Sobrenome;
+            loPesquisador.UserName = this.CadastroUsuario.Username;
+            loPesquisador.Email = this.CadastroUsuario.Email;
+            loPesquisador.Ativo = false;
+            loPesquisador.DataNascimento = this.CadastroUsuario.DataNascimento;
 
-      }
-      catch (Exception ex)
-      {
-        this.AddErrorAlert(ex.Message);
+            var userStore = new UserStore<Usuario>(unitOfWork.Context);
+            var manager = new UserManager<Usuario>(userStore);
+
+            var result = manager.Create(loPesquisador, this.CadastroUsuario.Senha);
+
+            if (result.Succeeded)
+            {
+              var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+              var userIdentity = manager.CreateIdentity(loPesquisador, DefaultAuthenticationTypes.ApplicationCookie);
+              authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+              Response.Redirect("~/SignIn.aspx");
+            }
+            else
+            {
+              result.Errors.ToList().ForEach(er => this.AddErrorAlert(er));
+            }
+          }
+
+        }
+        catch (Exception ex)
+        {
+          this.AddErrorAlert(ex.Message);
+        }
       }
     }
   }

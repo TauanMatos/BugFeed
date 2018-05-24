@@ -13,7 +13,15 @@ namespace BugFeed.Controls.Elements
     {
       get
       {
-        return Convert.ToDateTime(this.txtDateTime.Text);
+        try
+        {
+          return Convert.ToDateTime(this.txtDateTime.Text);
+        }
+        catch(FormatException ex)
+        {
+          throw new FormatException("A data inserida é inválida.", ex);
+        }
+        
       }
     }
   }

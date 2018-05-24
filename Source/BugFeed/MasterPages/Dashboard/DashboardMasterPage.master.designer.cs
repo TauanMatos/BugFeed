@@ -13,15 +13,6 @@ namespace BugFeed.MasterPages.Dashboard {
     public partial class DashboardMasterPage {
         
         /// <summary>
-        /// lbSair control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbSair;
-        
-        /// <summary>
         /// LeftSidebar control.
         /// </summary>
         /// <remarks>

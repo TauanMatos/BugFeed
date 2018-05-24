@@ -10,10 +10,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using static BugFeed.Controls.Elements.Alert;
-using BugFeed.Utils.Extensions;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using System.Data.Entity.Core.Objects;
 
 namespace BugFeed
 {
@@ -26,6 +26,10 @@ namespace BugFeed
       {
         if (User.Identity.IsAuthenticated)
         {
+          var userStore = new UserStore<Usuario>(new BugFeedContext());
+          var userManager = new UserManager<Usuario>(userStore);
+                   
+            
           //TODO: Redirecionar de acordo com o perfil do usuário
           this.Response.Redirect("~/Dashboard/Pesquisador/");
         }
@@ -49,7 +53,7 @@ namespace BugFeed
             var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
             authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = this.cbLembrarMe.Checked }, userIdentity);
-            Response.Redirect("~/Login.aspx");
+            Response.Redirect("~/SignIn.aspx");
           }
           else
           {

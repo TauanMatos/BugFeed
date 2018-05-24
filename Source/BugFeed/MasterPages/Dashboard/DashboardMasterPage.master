@@ -34,9 +34,9 @@
                 <a href="#" class="dropdown-item">
                   <span class="icon mdi mdi-settings"></span> Configurações
                 </a>
-                <asp:LinkButton runat="server" ID="lbSair" CssClass="dropdown-item" OnClick="lbSair_Click">
+                <a href="/SignOut.aspx" class="dropdown-item">
                   <span class="icon mdi mdi-power"></span> Sair
-                </asp:LinkButton>
+                </a>
               </div>
             </li>
           </ul>

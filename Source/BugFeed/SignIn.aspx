@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Login" Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BugFeed.Login" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" %>
+﻿<%@ Page Title="Login" Language="C#" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="BugFeed.Login" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" %>
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
   <asp:UpdatePanel ID="upAlerts" runat="server">
