@@ -15,10 +15,10 @@
 </div>
 <div class="form-group row signup-password">
   <div class="col-6">
-    <uc:TextBoxPassword ID="txtPassword" runat="server"></uc:TextBoxPassword>
+    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
   </div>
   <div class="col-6">
-    <uc:TextBoxPassword ID="txtConfirmaSenha" runat="server"></uc:TextBoxPassword>
+    <asp:TextBox ID="txtConfirmaSenha" runat="server"></asp:TextBox>
   </div>
 </div>
 <div class="form-group">

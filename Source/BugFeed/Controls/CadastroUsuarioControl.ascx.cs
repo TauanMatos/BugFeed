@@ -15,8 +15,8 @@ namespace BugFeed.Controls
     public string Sobrenome { get { return this.txtSobrenome.Text; } }
     public string Username { get { return this.txtUsername.Text; } }
     public string Email { get { return this.txtEmail.Text; } }
-    public string Senha { get { return this.txtPassword.Password; } }
-    public string ConfirmarSenha { get { return this.txtConfirmaSenha.Password; } }
+    public string Senha { get { return this.txtPassword.Text; } }
+    public string ConfirmarSenha { get { return this.txtConfirmaSenha.Text; } }
     public DateTime DataNascimento { get { return this.dtDatePicker.DateTime; } }
   }
 }

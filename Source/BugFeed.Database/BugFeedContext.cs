@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace BugFeed.Database
 {
-  public class BugFeedContext : DbContext
+  public class BugFeedContext : IdentityDbContext
   {
     public BugFeedContext() : base("BugFeed")
     { }
-
-    public DbSet<Email> Emails { get; set; }
+    
     public DbSet<Empresa> Empresas { get; set; }
     public DbSet<Endereco> Enderecos { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }

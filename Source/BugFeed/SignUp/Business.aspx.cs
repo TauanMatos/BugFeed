@@ -19,11 +19,11 @@ namespace BugFeed.SignUp
         Site = this.txtSite.Text,
         Endereco = new Endereco() { Destinatario = this.txtDestinatario.Text, Linha1 = this.txtComplemento.Text, Bairro = this.txtBairro.Text, Cidade = this.txtCidade.Text, Estado = this.txtEstado.Text, Pais = this.txtPais.Text },
         Funcionarios = new List<Funcionario>() { new Funcionario() { Grupo = new GrupoFuncionarios() { Permissoes = new List<Permissao>() { new Permissao() { Perfil = Perfil.Admin} } },
-                                                                     DataNascimento = this.CadastroUsuario.DataNascimento, Ativo = true, Nome = this.CadastroUsuario.Nome, Email = new Email(){ Endereco = this.CadastroUsuario.Email, Confirmado = false},
-                                                                     Senha = this.CadastroUsuario.Senha, Username = this.CadastroUsuario.Username, Sobrenome = this.CadastroUsuario.Sobrenome} }
+                                                                     DataNascimento = this.CadastroUsuario.DataNascimento, Ativo = true, Nome = this.CadastroUsuario.Nome, Email = this.CadastroUsuario.Email,
+                                                                     UserName = this.CadastroUsuario.Username, Sobrenome = this.CadastroUsuario.Sobrenome} }
       };
 
-      EmpresaDAL.Insert(loEmpresa);
+      //EmpresaDAL.Insert(loEmpresa);
     }
   }
 }

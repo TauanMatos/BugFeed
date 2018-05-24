@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.Database", "BugFeed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.DAL", "BugFeed.DAL\BugFeed.DAL.csproj", "{3A658D56-24A9-4458-B270-8F1F11D89A90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.Utils", "BugFeed.Utils\BugFeed.Utils.csproj", "{88265547-1752-4370-B836-2E6BE94613D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugFeed.Objects", "BugFeed.Utils\BugFeed.Objects.csproj", "{88265547-1752-4370-B836-2E6BE94613D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

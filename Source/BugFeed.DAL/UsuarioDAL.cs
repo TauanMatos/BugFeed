@@ -19,10 +19,12 @@ namespace BugFeed.DAL
     }
     public static Usuario AutenticaUsuario(string asUsername, string asPassword)
     {
-      using(BugFeedContext loDBContext = new BugFeedContext())
-      {
-        return loDBContext.Usuarios.Where(i => i.Username == asUsername && i.Senha == asPassword).FirstOrDefault();
-      }
+      //using(BugFeedContext loDBContext = new BugFeedContext())
+      //{
+      //  return loDBContext.Usuarios.Where(i => i.UserName == asUsername && i.Senha == asPassword).FirstOrDefault();
+      //}
+
+      return new Pesquisador();
     }
   }
 }
