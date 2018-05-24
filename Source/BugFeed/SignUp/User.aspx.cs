@@ -3,6 +3,7 @@ using BugFeed.Database;
 using BugFeed.Pages;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,15 +35,23 @@ namespace BugFeed.SignUp
 
         var result = manager.Create(loPesquisador, this.CadastroUsuario.Senha);
 
-        if (!result.Succeeded)
+        if (result.Succeeded)
+        {
+          var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+          var userIdentity = manager.CreateIdentity(loPesquisador, DefaultAuthenticationTypes.ApplicationCookie);
+          authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+          Response.Redirect("~/Login.aspx");
+        }
+        else
+        {
           result.Errors.ToList().ForEach(er => this.AddErrorAlert(er));
+        }
+
       }
       catch (Exception ex)
       {
         this.AddErrorAlert(ex.Message);
       }
-      
-      this.Response.Redirect("~/Login.aspx?newUser=1");
     }
   }
 }

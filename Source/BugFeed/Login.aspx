@@ -24,7 +24,7 @@
                   <div class="form-group row login-tools">
                     <div class="col-6 login-remember">
                       <label class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Lembrar-me</span>
+                        <input type="checkbox" class="custom-control-input" runat="server" id="cbLembrarMe"><span class="custom-control-label">Lembrar-me</span>
                       </label>
                     </div>
                     <div class="col-6 login-forgot-password"><a href="pages-forgot-password.html">Esqueceu a senha?</a></div>
