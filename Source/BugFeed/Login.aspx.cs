@@ -16,12 +16,23 @@ namespace BugFeed
 {
   public partial class Login : WebForm
   {
+    protected override void OnLoad(EventArgs e)
+    {
+      base.OnLoad(e);
+      if (this.Request["newUser"] != null && !this.IsPostBack)
+        this.AddAlert("Usuário criado com sucesso! Insira suas informações de login abaixo.");
+    }
+
+
     protected void btnEntrar_Click(object sender, EventArgs e)
     {
       if (this.IsFormValid("LoginForm"))
       {
         try
         {
+
+
+
           Usuario loUsuario = UsuarioDAL.AutenticaUsuario(this.txtUsername.Text, this.txtPassword.Text.ToPassword());
           if (loUsuario != null)
           {

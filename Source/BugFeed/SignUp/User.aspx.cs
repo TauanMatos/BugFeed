@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -27,7 +28,6 @@ namespace BugFeed.SignUp
         loPesquisador.Email = this.CadastroUsuario.Email;
         loPesquisador.Ativo = false;
         loPesquisador.DataNascimento = this.CadastroUsuario.DataNascimento;
-        //UsuarioDAL.Insert(loPesquisador);
 
         var userStore = new UserStore<Usuario>(new BugFeedContext());
         var manager = new UserManager<Usuario>(userStore);
@@ -42,7 +42,7 @@ namespace BugFeed.SignUp
         this.AddErrorAlert(ex.Message);
       }
       
-
+      this.Response.Redirect("~/Login.aspx?newUser=1");
     }
   }
 }
