@@ -55,7 +55,7 @@ namespace BugFeed.Controls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BugFeed.Controls.Elements.TextBoxPassword txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
         
         /// <summary>
         /// txtConfirmaSenha control.
@@ -64,7 +64,7 @@ namespace BugFeed.Controls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BugFeed.Controls.Elements.TextBoxPassword txtConfirmaSenha;
+        protected global::System.Web.UI.WebControls.TextBox txtConfirmaSenha;
         
         /// <summary>
         /// dtDatePicker control.

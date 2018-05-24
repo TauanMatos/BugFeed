@@ -17,7 +17,7 @@
                   <uc:CadastroUsuario runat="server" ID="CadastroUsuario"></uc:CadastroUsuario>
                   <div class="form-group pt-3 mb-3">
                     <label class="custom-control custom-checkbox">
-                      <asp:CheckBox ID="cbxTermos" runat="server" CssClass="custom-control-input" /><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a>.</span>
+                      <asp:CheckBox ID="cbxTermos" runat="server" CssClass="custom-control-input" /><span class="custom-control-label">Ao criar uma conta, você concorda com nossos <a href="#">termos e condições</a>.</span>
                     </label>
                   </div>
                   <div class="form-group pt-2">
