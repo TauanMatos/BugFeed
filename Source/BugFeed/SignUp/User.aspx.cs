@@ -44,7 +44,7 @@ namespace BugFeed.SignUp
               var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
               var userIdentity = manager.CreateIdentity(loPesquisador, DefaultAuthenticationTypes.ApplicationCookie);
               authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-              Response.Redirect("~/SignIn.aspx");
+              Response.Redirect("~/Account/SignIn.aspx");
             }
             else
             {

@@ -43,7 +43,7 @@ namespace BugFeed.SignUp
               var userIdentity = manager.CreateIdentity(funcionario, DefaultAuthenticationTypes.ApplicationCookie);
               authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
-              Response.Redirect("~/SignIn.aspx");
+              Response.Redirect("~/Account/SignIn.aspx");
             }
             else
             {

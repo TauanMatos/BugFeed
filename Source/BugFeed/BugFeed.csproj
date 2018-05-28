@@ -154,6 +154,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\ResetPassword.aspx" />
     <Content Include="App_Data\BugFeed.mdf" />
     <Content Include="App_Data\BugFeed_log.ldf">
       <DependentUpon>BugFeed.mdf</DependentUpon>
@@ -214,7 +215,7 @@
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="SignOut.aspx" />
+    <Content Include="Account\SignOut.aspx" />
     <Content Include="SignUp\Business.aspx" />
     <Content Include="Dashboard\Default.aspx" />
     <Content Include="favicon.ico" />
@@ -227,7 +228,7 @@
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.ttf" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.woff2" />
-    <Content Include="SignIn.aspx" />
+    <Content Include="Account\SignIn.aspx" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -255,6 +256,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Elements\DatePicker.ascx.cs">
       <DependentUpon>DatePicker.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,11 +312,11 @@
     <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.designer.cs">
       <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
     </Compile>
-    <Compile Include="SignOut.aspx.cs">
+    <Compile Include="Account\SignOut.aspx.cs">
       <DependentUpon>SignOut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SignOut.aspx.designer.cs">
+    <Compile Include="Account\SignOut.aspx.designer.cs">
       <DependentUpon>SignOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
@@ -328,11 +336,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="SignIn.aspx.cs">
+    <Compile Include="Account\SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SignIn.aspx.designer.cs">
+    <Compile Include="Account\SignIn.aspx.designer.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\BaseMasterPage.master.cs">

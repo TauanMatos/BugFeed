@@ -53,7 +53,7 @@ namespace BugFeed
             var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
             authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = this.cbLembrarMe.Checked }, userIdentity);
-            Response.Redirect("~/SignIn.aspx");
+            Response.Redirect("~/Account/SignIn.aspx");
           }
           else
           {
