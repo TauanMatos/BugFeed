@@ -14,6 +14,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Data.Entity.Core.Objects;
+using BugFeed.Properties;
 
 namespace BugFeed
 {
@@ -26,10 +27,6 @@ namespace BugFeed
       {
         if (User.Identity.IsAuthenticated)
         {
-          var userStore = new UserStore<Usuario>(new BugFeedContext());
-          var userManager = new UserManager<Usuario>(userStore);
-                   
-            
           //TODO: Redirecionar de acordo com o perfil do usuário
           this.Response.Redirect("~/Dashboard/Pesquisador/");
         }
@@ -53,7 +50,7 @@ namespace BugFeed
             var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
             authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = this.cbLembrarMe.Checked }, userIdentity);
-            Response.Redirect("~/Account/SignIn.aspx");
+            Response.Redirect(Urls.SignIn);
           }
           else
           {

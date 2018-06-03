@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BugFeed.Database
 {
-  public abstract class Usuario : IdentityUser
+  public class Usuario : IdentityUser
   {
 
     [Required]
@@ -23,6 +23,10 @@ namespace BugFeed.Database
 
     [DataType(DataType.Date)]
     public DateTime DataNascimento { get; set; }
+
+    public Funcionario Funcionario { get; set; }
+
+    public Pesquisador Pesquisador { get; set; }
   }
 
 }

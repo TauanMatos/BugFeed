@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Cadastro Usuário" Language="C#" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="BugFeed.SignUp.User" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-  <asp:UpdatePanel ID="upAlerts" runat="server">
+  <asp:UpdatePanel runat="server">
     <ContentTemplate>
       <div class="be-wrapper be-login be-signup">
         <div class="be-content">

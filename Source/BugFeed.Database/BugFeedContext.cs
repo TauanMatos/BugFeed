@@ -21,5 +21,7 @@ namespace BugFeed.Database
     public DbSet<GrupoFuncionarios> GruposFuncionarios { get; set; }
     public DbSet<Permissao> Permissoes { get; set; }
     public DbSet<Comentario> Comentarios { get; set; }
+    public DbSet<Funcionario> Funcionarios { get; set; }
+    public DbSet<Pesquisador> Pesquisadores { get; set; }
   }
 }

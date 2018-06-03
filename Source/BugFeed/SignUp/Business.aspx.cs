@@ -1,6 +1,7 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
 using BugFeed.Pages;
+using BugFeed.Properties;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -28,22 +29,28 @@ namespace BugFeed.SignUp
             var userStore = new UserStore<Usuario>(unitOfWork.Context);
             var manager = new UserManager<Usuario>(userStore);
 
-            Funcionario funcionario = this.GetFuncionario();
-            var result = manager.Create(funcionario, this.CadastroUsuario.Senha);
+            Usuario usuario = this.GetUsuario();
+            var result = manager.Create(usuario, this.CadastroUsuario.Senha);
 
             if (result.Succeeded)
             {
-              Empresa empresa = this.GetEmpresa(funcionario);
-              unitOfWork.EmpresaRepository.Insert(empresa);
+              Empresa empresa = this.GetEmpresa();
+              unitOfWork.Empresas.Insert(empresa);
+              empresa = unitOfWork.Empresas.GetByID(empresa.EmpresaId);
+
+              empresa.GrupoFuncionarios.First().Funcionarios = new List<Funcionario>
+              {
+                new Funcionario { Usuario = usuario }
+              };
 
               unitOfWork.Save();
               transaction.Commit();
 
               var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-              var userIdentity = manager.CreateIdentity(funcionario, DefaultAuthenticationTypes.ApplicationCookie);
+              var userIdentity = manager.CreateIdentity(usuario, DefaultAuthenticationTypes.ApplicationCookie);
               authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
-              Response.Redirect("~/Account/SignIn.aspx");
+              Response.Redirect(Urls.SignIn);
             }
             else
             {
@@ -59,18 +66,10 @@ namespace BugFeed.SignUp
       }
     }
 
-    private Funcionario GetFuncionario()
+    private Usuario GetUsuario()
     {
-      return new Funcionario()
+      return new Usuario
       {
-        Grupo = new GrupoFuncionarios()
-        {
-          Permissoes = new List<Permissao>() {
-                new Permissao() {
-                  Perfil = Perfil.Admin
-                }
-              }
-        },
         DataNascimento = this.CadastroUsuario.DataNascimento,
         Ativo = true,
         Nome = this.CadastroUsuario.Nome,
@@ -80,7 +79,7 @@ namespace BugFeed.SignUp
       };
     }
 
-    private Empresa GetEmpresa(Funcionario funcionario)
+    private Empresa GetEmpresa()
     {
       return new Empresa
       {
@@ -95,7 +94,17 @@ namespace BugFeed.SignUp
           Estado = this.txtEstado.Text,
           Pais = this.txtPais.Text
         },
-        Funcionarios = new List<Funcionario>() { funcionario }
+        GrupoFuncionarios = new List<GrupoFuncionarios>()
+        {
+          new GrupoFuncionarios()
+          {
+            Permissoes = new List<Permissao>() {
+                new Permissao() {
+                  Perfil = Perfil.Admin
+                }
+              }
+          }
+        }
       };
     }
   }

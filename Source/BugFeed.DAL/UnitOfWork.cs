@@ -8,8 +8,9 @@ namespace BugFeed.DAL
     public BugFeedContext Context { get; } = new BugFeedContext();
     private EmpresaRepository empresaRepository;
     private ProgramaRecompensaRepository programaRecompensaRepository;
+    private PesquisadorRepository pesquisadorRepository;
 
-    public EmpresaRepository EmpresaRepository
+    public EmpresaRepository Empresas
     {
       get
       {
@@ -22,7 +23,7 @@ namespace BugFeed.DAL
       }
     }
 
-    public ProgramaRecompensaRepository ProgramaRecompensaRepository
+    public ProgramaRecompensaRepository ProgramasRecompensas
     {
       get
       {
@@ -31,6 +32,18 @@ namespace BugFeed.DAL
           this.programaRecompensaRepository = new ProgramaRecompensaRepository(Context);
         }
         return programaRecompensaRepository;
+      }
+    }
+
+    public PesquisadorRepository Pesquisadores
+    {
+      get
+      {
+        if (this.pesquisadorRepository == null)
+        {
+          this.pesquisadorRepository = new PesquisadorRepository(Context);
+        }
+        return pesquisadorRepository;
       }
     }
 

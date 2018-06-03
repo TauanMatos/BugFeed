@@ -23,6 +23,8 @@ namespace BugFeed.Database
 
     public virtual List<ProgramaRecompensas> Programas { get; set; }
 
-    public virtual List<Funcionario> Funcionarios { get; set; }
+    public virtual List<GrupoFuncionarios> GrupoFuncionarios { get; set; }
+
+    public bool Verificada { get; set; }
   }
 }

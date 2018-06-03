@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BugFeed.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,7 @@ namespace BugFeed
     {
       var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
       authenticationManager.SignOut();
-      Response.Redirect("~/SignIn.aspx");
+      Response.Redirect(Urls.SignIn);
     }
   }
 }

@@ -20,8 +20,17 @@ function toggleLoader(visible) {
     $loaderWrapper.fadeOut(100);
 }
 
+function initSummernote() {
+  $(".summernote").summernote({height: 300});
+  // When the summernote instance loses focus, update the content of your <textarea>
+  $(".summernote").on('summernote.blur', function () {
+    $('.summernote').html($('.summernote').summernote('code'));
+  });
+}
+
 $(document).ready(function () {
   App.init();
   App.masks();
   App.formElements();
+  initSummernote();
 });

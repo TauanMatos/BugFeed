@@ -61,9 +61,9 @@
     <Compile Include="Formacao.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="GrupoFuncionario.cs" />
-    <Compile Include="Migrations\201805232332416_InitialCreateWithIdentity.cs" />
-    <Compile Include="Migrations\201805232332416_InitialCreateWithIdentity.Designer.cs">
-      <DependentUpon>201805232332416_InitialCreateWithIdentity.cs</DependentUpon>
+    <Compile Include="Migrations\201806022127477_AtualizacaoModelo.cs" />
+    <Compile Include="Migrations\201806022127477_AtualizacaoModelo.Designer.cs">
+      <DependentUpon>201806022127477_AtualizacaoModelo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Permissao.cs" />
@@ -80,8 +80,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805232332416_InitialCreateWithIdentity.resx">
-      <DependentUpon>201805232332416_InitialCreateWithIdentity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806022127477_AtualizacaoModelo.resx">
+      <DependentUpon>201806022127477_AtualizacaoModelo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

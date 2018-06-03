@@ -14,7 +14,13 @@ namespace BugFeed.Database
     public Empresa Empresa { get; set; }
 
     [Required]
-    public bool Ativo { get; set; }
+    public EstadoProgramaRecompensa Estado { get; set; }
+
+    [Required]
+    public string Titulo { get; set; }
+
+    [Required]
+    public string Descricao { get; set; }
 
     [Required]
     public DateTime DataCriacao { get; set; }
@@ -27,5 +33,12 @@ namespace BugFeed.Database
     public virtual List<ComentarioPrograma> Comentarios { get; set; }
 
     public virtual List<Recompensa> Recompensas { get; set; }
+  }
+
+  public enum EstadoProgramaRecompensa
+  {
+    Ativo,
+    Pausado,
+    Finalizado
   }
 }

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
+
 namespace BugFeed.MasterPages
 {
   public partial class BaseMasterPage : System.Web.UI.MasterPage

@@ -7,13 +7,13 @@ namespace BugFeed.Database.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialCreateWithIdentity : IMigrationMetadata
+    public sealed partial class AtualizacaoModelo : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreateWithIdentity));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AtualizacaoModelo));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805232332416_InitialCreateWithIdentity"; }
+            get { return "201806022127477_AtualizacaoModelo"; }
         }
         
         string IMigrationMetadata.Source

@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace BugFeed.Database
 {
-  public class Funcionario : Usuario
+  public class Funcionario
   {
+    public int FuncionarioId { get; set; }
+
     [Required]
     public GrupoFuncionarios Grupo { get; set; }
+
+    [Required]
+    public Usuario Usuario { get; set; }
   }
 }

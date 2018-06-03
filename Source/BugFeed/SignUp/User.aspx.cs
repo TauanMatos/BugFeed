@@ -1,11 +1,13 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
 using BugFeed.Pages;
+using BugFeed.Properties;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -26,28 +28,39 @@ namespace BugFeed.SignUp
         {
           using (UnitOfWork unitOfWork = new UnitOfWork())
           {
-            Pesquisador loPesquisador = new Pesquisador();
-            loPesquisador.Nome = this.CadastroUsuario.Nome;
-            loPesquisador.Sobrenome = this.CadastroUsuario.Sobrenome;
-            loPesquisador.UserName = this.CadastroUsuario.Username;
-            loPesquisador.Email = this.CadastroUsuario.Email;
-            loPesquisador.Ativo = false;
-            loPesquisador.DataNascimento = this.CadastroUsuario.DataNascimento;
+            DbContextTransaction transaction = unitOfWork.Context.Database.BeginTransaction();
 
             var userStore = new UserStore<Usuario>(unitOfWork.Context);
             var manager = new UserManager<Usuario>(userStore);
 
-            var result = manager.Create(loPesquisador, this.CadastroUsuario.Senha);
+            Usuario usuario = new Usuario
+            {
+              Nome = this.CadastroUsuario.Nome,
+              Sobrenome = this.CadastroUsuario.Sobrenome,
+              UserName = this.CadastroUsuario.Username,
+              Email = this.CadastroUsuario.Email,
+              Ativo = false,
+              DataNascimento = this.CadastroUsuario.DataNascimento
+            };
+
+            var result = manager.Create(usuario, this.CadastroUsuario.Senha);
 
             if (result.Succeeded)
             {
+              Pesquisador pesquisador = new Pesquisador { Usuario = usuario };
+              unitOfWork.Pesquisadores.Insert(pesquisador);
+
+              unitOfWork.Save();
+              transaction.Commit();
+
               var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-              var userIdentity = manager.CreateIdentity(loPesquisador, DefaultAuthenticationTypes.ApplicationCookie);
+              var userIdentity = manager.CreateIdentity(usuario, DefaultAuthenticationTypes.ApplicationCookie);
               authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
-              Response.Redirect("~/Account/SignIn.aspx");
+              Response.Redirect(Urls.SignIn);
             }
             else
             {
+              transaction.Rollback();
               result.Errors.ToList().ForEach(er => this.AddErrorAlert(er));
             }
           }

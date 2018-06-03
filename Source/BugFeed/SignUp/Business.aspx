@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Cadastro de Empresas" Language="C#" MasterPageFile="~/MasterPages/SplashScreenMasterPage.master" AutoEventWireup="true" CodeBehind="Business.aspx.cs" Inherits="BugFeed.SignUp.Business" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-  <asp:UpdatePanel ID="upAlerts" runat="server">
+  <asp:UpdatePanel runat="server">
     <ContentTemplate>
       <div class="main-content container-fluid">
         <div class="card card-border-color">

@@ -209,11 +209,68 @@
     <Content Include="assets\lib\select2\css\select2.min.css" />
     <Content Include="assets\lib\select2\js\select2.full.min.js" />
     <Content Include="assets\lib\select2\js\select2.min.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ar-AR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-bg-BG.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ca-ES.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-cs-CZ.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-da-DK.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-de-DE.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-el-GR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-es-ES.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-es-EU.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-fa-IR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-fi-FI.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-fr-FR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-gl-ES.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-he-IL.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-hr-HR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-hu-HU.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-id-ID.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-it-IT.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ja-JP.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ko-KR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-lt-LT.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-lt-LV.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-mn-MN.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-nb-NO.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-nl-NL.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-pl-PL.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-pt-BR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-pt-PT.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ro-RO.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ru-RU.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-sk-SK.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-sl-SI.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-sr-RS.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-sv-SE.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-ta-IN.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-th-TH.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-tr-TR.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-uk-UA.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-vi-VN.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="assets\lib\summernote\lang\summernote-zh-TW.js" />
+    <Content Include="assets\lib\summernote\plugin\databasic\summernote-ext-databasic.css" />
+    <Content Include="assets\lib\summernote\plugin\databasic\summernote-ext-databasic.js" />
+    <Content Include="assets\lib\summernote\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="assets\lib\summernote\plugin\specialchars\summernote-ext-specialchars.js" />
+    <Content Include="assets\lib\summernote\summernote-bs4.css" />
+    <Content Include="assets\lib\summernote\summernote-bs4.js" />
+    <Content Include="assets\lib\summernote\summernote-bs4.min.js" />
+    <Content Include="assets\lib\summernote\summernote-ext-beagle.js" />
+    <Content Include="assets\lib\summernote\summernote-lite.css" />
+    <Content Include="assets\lib\summernote\summernote-lite.js" />
+    <Content Include="assets\lib\summernote\summernote.css" />
+    <Content Include="assets\lib\summernote\summernote.js" />
+    <Content Include="assets\lib\summernote\summernote.min.js" />
     <Content Include="Controls\Elements\Alert.ascx" />
     <Content Include="Controls\Elements\DatePicker.ascx" />
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
+    <Content Include="Dashboard\Programas\Default.aspx" />
+    <Content Include="Dashboard\Programas\Novo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Account\SignOut.aspx" />
     <Content Include="SignUp\Business.aspx" />
@@ -298,12 +355,33 @@
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\Programas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Programas\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Programas\Novo.aspx.cs">
+      <DependentUpon>Novo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Programas\Novo.aspx.designer.cs">
+      <DependentUpon>Novo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Dashboard\FuncionarioMasterPage.master.cs">
+      <DependentUpon>FuncionarioMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Dashboard\FuncionarioMasterPage.master.designer.cs">
+      <DependentUpon>FuncionarioMasterPage.master</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Dashboard\PesquisadorMasterPage.master.cs">
       <DependentUpon>PesquisadorMasterPage.master</DependentUpon>
@@ -318,6 +396,14 @@
     </Compile>
     <Compile Include="Account\SignOut.aspx.designer.cs">
       <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard\DashboardPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\Urls.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Urls.resx</DependentUpon>
     </Compile>
     <Compile Include="SignUp\Business.aspx.cs">
       <DependentUpon>Business.aspx</DependentUpon>
@@ -440,6 +526,10 @@
     <Content Include="assets\lib\bootstrap\js\bootstrap.js.map" />
     <Content Include="assets\lib\bootstrap\js\bootstrap.min.js.map" />
     <Content Include="MasterPages\Dashboard\PesquisadorMasterPage.master" />
+    <Content Include="MasterPages\Dashboard\FuncionarioMasterPage.master" />
+    <Content Include="assets\lib\summernote\font\summernote.eot" />
+    <Content Include="assets\lib\summernote\font\summernote.ttf" />
+    <Content Include="assets\lib\summernote\font\summernote.woff" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -465,6 +555,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dashboard\Administrador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Urls.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Urls.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
