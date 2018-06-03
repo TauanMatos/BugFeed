@@ -40,6 +40,15 @@ namespace BugFeed.Dashboard.Programas {
         protected global::System.Web.UI.WebControls.TextBox txtDescricao;
         
         /// <summary>
+        /// btCancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btCancelar;
+        
+        /// <summary>
         /// btSalvar control.
         /// </summary>
         /// <remarks>

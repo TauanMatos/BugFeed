@@ -25,8 +25,7 @@ namespace BugFeed.Database
     [Required]
     public DateTime DataCriacao { get; set; }
 
-    [Required]
-    public DateTime UltimaRevisao { get; set; }
+    public DateTime? UltimaRevisao { get; set; }
 
     public virtual List<RelatorioBug> Relatorios { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
 using BugFeed.Pages.Dashboard;
+using BugFeed.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,24 +24,29 @@ namespace BugFeed.Dashboard.Programas
       {
         using (UnitOfWork unitOfWork = new UnitOfWork())
         {
-          ProgramaRecompensas programa = new ProgramaRecompensas
-          {
-            Titulo = this.txtTitulo.Text.Trim(),
-            Estado = EstadoProgramaRecompensa.Ativo,
-            Descricao = this.txtDescricao.Text.Trim(),
-            Empresa = this.Funcionario.Grupo.Empresa,
-            DataCriacao = DateTime.Now
-          };
+          ProgramaRecompensas programa = unitOfWork.Context.ProgramasRecompensas.Create();
+          Usuario usuario = this.GetUsuario(unitOfWork.Context);
+          
+          programa.Titulo = this.txtTitulo.Text.Trim();
+          programa.Estado = EstadoProgramaRecompensa.Ativo;
+          programa.Descricao = this.txtDescricao.Text.Trim();
+          programa.Empresa = usuario.Funcionario.Grupo.Empresa;
+          programa.DataCriacao = DateTime.Now;
 
           unitOfWork.ProgramasRecompensas.Insert(programa);
           unitOfWork.Save();
-          this.AddAlert("Programa criado com sucesso!");
+          this.AddAlert("O programa de recompensas foi criado.");
         }
       }
       catch (Exception ex)
       {
         this.AddErrorAlert(ex.Message);
       }
+    }
+
+    protected void btCancelar_Click(object sender, EventArgs e)
+    {
+      this.Response.Redirect(Urls.GerenciamentoProgramas);
     }
   }
 }

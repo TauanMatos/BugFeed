@@ -14,44 +14,13 @@ namespace BugFeed.Pages.Dashboard
 {
   public class DashboardPage : WebForm
   {
-    private Usuario usuario;
 
-    public Usuario Usuario
+    public Usuario GetUsuario(BugFeedContext context = null)
     {
-      get
-      {
-        if (usuario == null)
-        {
-          using (UnitOfWork unitOfWork = new UnitOfWork())
-          {
-            var userStore = new UserStore<Usuario>(unitOfWork.Context);
-            var userManager = new UserManager<Usuario>(userStore);
-            string userId = this.User.Identity.GetUserId();
-            usuario = userManager.Users
-              .Include(u => u.Pesquisador)
-              .Include(u => u.Funcionario.Grupo.Empresa)
-              .Where(u => u.Id == userId)
-              .FirstOrDefault();
-          }
-        }
-        return usuario;
-      }
-    }
-
-    public Funcionario Funcionario
-    {
-      get
-      {
-        return this.Usuario.Funcionario;
-      }
-    }
-
-    public Pesquisador Pesquisador
-    {
-      get
-      {
-        return (Pesquisador)this.Usuario.Pesquisador;
-      }
+      var userStore = new UserStore<Usuario>(context);
+      var userManager = new UserManager<Usuario>(userStore);
+      string userId = this.User.Identity.GetUserId();
+      return userManager.FindById(userId);
     }
 
     protected override void OnInit(EventArgs e)

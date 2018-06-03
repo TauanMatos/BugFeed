@@ -61,6 +61,15 @@ namespace BugFeed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Programas/.
+        /// </summary>
+        internal static string GerenciamentoProgramas {
+            get {
+                return ResourceManager.GetString("GerenciamentoProgramas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/Dashboard/Programas/Novo.aspx.
         /// </summary>
         internal static string NovoPrograma {
