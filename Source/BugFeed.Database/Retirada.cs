@@ -11,10 +11,10 @@ namespace BugFeed.Database
   {
     public int RetiradaId { get; set; }
 
-    public Pesquisador Pesquisador { get; set; }
+    public virtual Pesquisador Pesquisador { get; set; }
 
     [Required]
-    public DadosBancarios DadosBancarios { get; set; }
+    public virtual DadosBancarios DadosBancarios { get; set; }
 
     [Required]
     public decimal Valor { get; set; }

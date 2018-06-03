@@ -11,9 +11,9 @@ namespace BugFeed.Database
     public int FuncionarioId { get; set; }
 
     [Required]
-    public GrupoFuncionarios Grupo { get; set; }
+    public virtual GrupoFuncionarios Grupo { get; set; }
 
     [Required]
-    public Usuario Usuario { get; set; }
+    public virtual Usuario Usuario { get; set; }
   }
 }

@@ -11,13 +11,13 @@ namespace BugFeed.Database
     public int RecompensaId { get; set; }
 
     [Required]
-    public ProgramaRecompensas Programa { get; set; }
+    public virtual ProgramaRecompensas Programa { get; set; }
 
-    public Funcionario Avaliador { get; set; }
+    public virtual Funcionario Avaliador { get; set; }
 
-    public Funcionario Pagador { get; set; }
+    public virtual Funcionario Pagador { get; set; }
 
-    public Pesquisador Pesquisador { get; set; }
+    public virtual Pesquisador Pesquisador { get; set; }
 
     [Required]
     public decimal Valor { get; set; }

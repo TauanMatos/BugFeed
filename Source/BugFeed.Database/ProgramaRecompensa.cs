@@ -11,7 +11,7 @@ namespace BugFeed.Database
     public int ProgramaRecompensasId { get; set; }
 
     [Required]
-    public Empresa Empresa { get; set; }
+    public virtual Empresa Empresa { get; set; }
 
     [Required]
     public EstadoProgramaRecompensa Estado { get; set; }

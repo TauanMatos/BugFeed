@@ -24,9 +24,9 @@ namespace BugFeed.Database
     [DataType(DataType.Date)]
     public DateTime DataNascimento { get; set; }
 
-    public Funcionario Funcionario { get; set; }
+    public virtual Funcionario Funcionario { get; set; }
 
-    public Pesquisador Pesquisador { get; set; }
+    public virtual Pesquisador Pesquisador { get; set; }
   }
 
 }

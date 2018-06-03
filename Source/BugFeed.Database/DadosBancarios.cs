@@ -11,7 +11,7 @@ namespace BugFeed.Database
     public int DadosBancariosId { get; set; }
 
     [Required]
-    public Pesquisador Pesquisador { get; set; }
+    public virtual Pesquisador Pesquisador { get; set; }
 
     [Required]
     public string CPF { get; set; }

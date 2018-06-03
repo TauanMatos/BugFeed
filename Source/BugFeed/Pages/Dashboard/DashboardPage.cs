@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -23,10 +24,14 @@ namespace BugFeed.Pages.Dashboard
         {
           using (UnitOfWork unitOfWork = new UnitOfWork())
           {
-            unitOfWork.Context.Configuration.LazyLoadingEnabled = false;
             var userStore = new UserStore<Usuario>(unitOfWork.Context);
             var userManager = new UserManager<Usuario>(userStore);
-            usuario = userManager.FindById(User.Identity.GetUserId());
+            string userId = this.User.Identity.GetUserId();
+            usuario = userManager.Users
+              .Include(u => u.Pesquisador)
+              .Include(u => u.Funcionario.Grupo.Empresa)
+              .Where(u => u.Id == userId)
+              .FirstOrDefault();
           }
         }
         return usuario;

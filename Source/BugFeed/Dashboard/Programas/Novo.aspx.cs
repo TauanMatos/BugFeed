@@ -19,19 +19,27 @@ namespace BugFeed.Dashboard.Programas
 
     protected void btSalvar_Click(object sender, EventArgs e)
     {
-      using (UnitOfWork unitOfWork = new UnitOfWork())
+      try
       {
-        ProgramaRecompensas programa = new ProgramaRecompensas
+        using (UnitOfWork unitOfWork = new UnitOfWork())
         {
-          Titulo = this.txtTitulo.Text.Trim(),
-          Descricao = this.txtDescricao.Text.Trim(),
-          Empresa = this.Funcionario.Grupo.Empresa,
-          DataCriacao = DateTime.Now
-        };
-        
-        unitOfWork.ProgramasRecompensas.Insert(programa);
-        unitOfWork.Save();
-        this.AddAlert("Programa criado com sucesso!");
+          ProgramaRecompensas programa = new ProgramaRecompensas
+          {
+            Titulo = this.txtTitulo.Text.Trim(),
+            Estado = EstadoProgramaRecompensa.Ativo,
+            Descricao = this.txtDescricao.Text.Trim(),
+            Empresa = this.Funcionario.Grupo.Empresa,
+            DataCriacao = DateTime.Now
+          };
+
+          unitOfWork.ProgramasRecompensas.Insert(programa);
+          unitOfWork.Save();
+          this.AddAlert("Programa criado com sucesso!");
+        }
+      }
+      catch (Exception ex)
+      {
+        this.AddErrorAlert(ex.Message);
       }
     }
   }

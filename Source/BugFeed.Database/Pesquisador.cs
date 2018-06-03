@@ -12,7 +12,7 @@ namespace BugFeed.Database
 
     public virtual List<Formacao> Formacoes { get; set; }
 
-    public Endereco Endereco { get; set; }
+    public virtual Endereco Endereco { get; set; }
 
     public virtual List<DadosBancarios> DadosBancarios { get; set; }
 
@@ -21,6 +21,6 @@ namespace BugFeed.Database
     public virtual List<Retirada> Retiradas { get; set; }
 
     [Required]
-    public Usuario Usuario { get; set; }
+    public virtual Usuario Usuario { get; set; }
   }
 }

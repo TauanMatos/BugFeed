@@ -12,11 +12,11 @@ namespace BugFeed.Database
 
     public string Nome { get; set; }
 
-    public List<Permissao> Permissoes { get; set; }
+    public virtual List<Permissao> Permissoes { get; set; }
     
     public virtual List<Funcionario> Funcionarios { get; set; }
 
     [Required]
-    public Empresa Empresa { get; set; }
+    public virtual Empresa Empresa { get; set; }
   }
 }

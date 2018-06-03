@@ -12,10 +12,10 @@ namespace BugFeed.Database
     public int RelatorioBugId { get; set; }
 
     [Required]
-    public Pesquisador Pesquisador { get; set; }
+    public virtual Pesquisador Pesquisador { get; set; }
 
     [Required]
-    public ProgramaRecompensas Programa { get; set; }
+    public virtual ProgramaRecompensas Programa { get; set; }
 
     [Required]
     [MaxLength(150)]

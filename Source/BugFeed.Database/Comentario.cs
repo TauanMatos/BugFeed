@@ -17,7 +17,7 @@ namespace BugFeed.Database
     public DateTime DataHora { get; set; }
 
     [Required]
-    public Usuario Usuario { get; set; }
+    public virtual Usuario Usuario { get; set; }
 
     [Required]
     public bool Apagado { get; set; }
@@ -32,11 +32,11 @@ namespace BugFeed.Database
 
   public class ComentarioPrograma : Comentario
   {
-    public ProgramaRecompensas Programa { get; set; }
+    public virtual ProgramaRecompensas Programa { get; set; }
   }
 
   public class ComentarioRelatorio : Comentario
   {
-    public RelatorioBug Relatorio { get; set; }
+    public virtual RelatorioBug Relatorio { get; set; }
   }
 }
