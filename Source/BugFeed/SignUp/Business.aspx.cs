@@ -39,9 +39,10 @@ namespace BugFeed.SignUp
             var userStore = new UserStore<Usuario>(unitOfWork.Context);
             var manager = new UserManager<Usuario>(userStore);
 
+            this.ValidaUsernameEmail(manager, unitOfWork);
+
             Usuario usuario = this.GetUsuario();
             var result = manager.Create(usuario, this.Senha);
-
             if (result.Succeeded)
             {
               Empresa empresa = this.GetEmpresa();
@@ -76,6 +77,12 @@ namespace BugFeed.SignUp
       }
     }
 
+    private void ValidaUsernameEmail(UserManager<Usuario> aoManager, UnitOfWork aoUnitiOfWork)
+    {
+      Usuario loUsuario = aoManager.FindByEmail(this.txtEmail.Text);
+      if (loUsuario != null)
+        throw new ValidationException("Já existe uma conta associada a esse email.");
+    }
     private Usuario GetUsuario()
     {
       return new Usuario
