@@ -23,6 +23,9 @@ namespace BugFeed.Database
     public string Descricao { get; set; }
 
     [Required]
+    public decimal Orcamento { get; set; }
+
+    [Required]
     public DateTime DataCriacao { get; set; }
 
     public DateTime? UltimaRevisao { get; set; }

@@ -70,6 +70,15 @@ namespace BugFeed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Pesquisador/.
+        /// </summary>
+        internal static string DashboardPesquisador {
+            get {
+                return ResourceManager.GetString("DashboardPesquisador", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/Dashboard/Programas/.
         /// </summary>
         internal static string GerenciamentoProgramas {

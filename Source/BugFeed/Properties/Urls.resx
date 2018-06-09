@@ -120,6 +120,9 @@
   <data name="Dashboard" xml:space="preserve">
     <value>~/Dashboard/</value>
   </data>
+  <data name="DashboardPesquisador" xml:space="preserve">
+    <value>~/Dashboard/Pesquisador/</value>
+  </data>
   <data name="GerenciamentoProgramas" xml:space="preserve">
     <value>~/Dashboard/Programas/</value>
   </data>

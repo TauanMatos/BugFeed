@@ -1,5 +1,7 @@
 ﻿using BugFeed.DAL;
+using BugFeed.Database;
 using BugFeed.Pages.Dashboard;
+using BugFeed.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,11 @@ namespace BugFeed.Dashboard
 
       using (UnitOfWork unitOfWork = new UnitOfWork())
       {
-
+        Usuario usuario = this.GetUsuario(unitOfWork.Context);
+        if (usuario.Pesquisador != null)
+          this.Response.Redirect(Urls.DashboardPesquisador);
+        else if (usuario.Funcionario != null)
+          this.Response.Redirect(Urls.GerenciamentoProgramas);
       }
     }
   }

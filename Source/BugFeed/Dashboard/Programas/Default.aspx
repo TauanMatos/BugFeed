@@ -26,17 +26,17 @@
                 </div>
               </div>
               <div class="card-body">
-                <asp:Repeater runat="server" ID="rptProgramas">
+                <asp:Repeater runat="server" ID="rptProgramas" OnItemDataBound="rptProgramas_ItemDataBound">
                   <HeaderTemplate>
                     <div class="table-responsive noSwipe">
                       <table class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th style="width: 25%;">Titulo</th>
-                            <th style="width: 17%;">Last Commit</th>
-                            <th style="width: 15%;">Milestone</th>
-                            <th style="width: 10%;">Branch</th>
-                            <th style="width: 10%;">Date</th>
+                            <th style="width: 25%;">Título</th>
+                            <th style="width: 17%;">Estado</th>
+                            <th style="width: 10%;">Relatórios</th>
+                            <th style="width: 20%;">Orçamento</th>
+                            <th style="width: 10%;">Criado em</th>
                             <th style="width: 10%;"></th>
                           </tr>
                         </thead>
@@ -44,19 +44,20 @@
                   </HeaderTemplate>
                   <ItemTemplate>
                     <tr>
-                      <td class="user-avatar cell-detail user-info">
-                        <img src="assets/img/avatar6.png" alt="Avatar"><span>Penelope Thornton</span><span class="cell-detail-description">Developer</span></td>
-                      <td class="cell-detail"><span>Initial commit</span><span class="cell-detail-description">Bootstrap Admin</span></td>
-                      <td class="milestone"><span class="completed">8 / 15</span><span class="version">v1.2.0</span>
+                      <td><%# Eval("Titulo") %></td>
+                      <td runat="server" id="tdEstado"><%# Eval("Estado") %></td>
+                      <td runat="server" id="tdQntRelatorios"></td>
+                      <td class="milestone">
+                        <span class="completed" runat="server" id="spnOrcamento"></span>
+                        <span class="version">&nbsp;</span>
                         <div class="progress">
-                          <div style="width: 45%" class="progress-bar progress-bar-primary"></div>
+                          <div id="divOrcamentoProgress" runat="server" class="progress-bar progress-bar-primary"></div>
                         </div>
                       </td>
-                      <td class="cell-detail"><span>master</span><span class="cell-detail-description">63e8ec3</span></td>
-                      <td class="cell-detail"><span>May 6, 2016</span><span class="cell-detail-description">8:30</span></td>
+                      <td runat="server" id="tdData"></td>
                       <td class="text-right">
                         <div class="btn-group btn-hspace">
-                          <button type="button" data-toggle="dropdown" class="btn btn-secondary dropdown-toggle">Open <span class="icon-dropdown mdi mdi-chevron-down"></span></button>
+                          <button type="button" data-toggle="dropdown" class="btn btn-secondary dropdown-toggle">Opções <span class="icon-dropdown mdi mdi-chevron-down"></span></button>
                           <div role="menu" class="dropdown-menu">
                             <a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Another action</a><a href="#" class="dropdown-item">Something else here</a>
                             <div class="dropdown-divider"></div>
@@ -73,9 +74,9 @@
                   </FooterTemplate>
                 </asp:Repeater>
               </div>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </ContentTemplate>
   </asp:UpdatePanel>

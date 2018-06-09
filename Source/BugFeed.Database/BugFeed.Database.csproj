@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201806031309029_UltimaRevisaoNull.Designer.cs">
       <DependentUpon>201806031309029_UltimaRevisaoNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.cs" />
+    <Compile Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.Designer.cs">
+      <DependentUpon>201806092112037_ProgramaRecompensaOrcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Pesquisador.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806031309029_UltimaRevisaoNull.resx">
       <DependentUpon>201806031309029_UltimaRevisaoNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.resx">
+      <DependentUpon>201806092112037_ProgramaRecompensaOrcamento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
