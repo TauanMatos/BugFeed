@@ -39,6 +39,7 @@
   <script src="/assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
   <script src="/assets/lib/summernote/summernote-bs4.js" type="text/javascript"></script>
   <script src="/assets/lib/summernote/summernote-ext-beagle.js" type="text/javascript"></script>
+  <script src="/assets/lib/fuelux/js/fuelux.min.js"></script>
   <script src="/assets/js/app.js" type="text/javascript"></script>
   <script src="/assets/js/main.js" type="text/javascript"></script>
 </body>
