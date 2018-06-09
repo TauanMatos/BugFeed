@@ -9,7 +9,17 @@ namespace BugFeed.DAL
     private EmpresaRepository empresaRepository;
     private ProgramaRecompensaRepository programaRecompensaRepository;
     private PesquisadorRepository pesquisadorRepository;
+    private FuncionarioRepository ioFuncionarioRepository;
 
+    public FuncionarioRepository Funcionario
+    {
+      get
+      {
+        if (this.ioFuncionarioRepository == null)
+          this.ioFuncionarioRepository = new FuncionarioRepository(Context);
+        return this.ioFuncionarioRepository;
+      }
+    }
     public EmpresaRepository Empresas
     {
       get

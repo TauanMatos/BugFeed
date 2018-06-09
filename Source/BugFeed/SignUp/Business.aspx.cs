@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,15 @@ namespace BugFeed.SignUp
 {
   public partial class Business : WebForm
   {
+    public string Senha
+    {
+      get
+      {
+        if (this.txtPassword.Text != this.txtConfirmaSenha.Text)
+          throw new ValidationException("As senhas devem ser iguais.");
+        return this.txtPassword.Text;
+      }
+    }
     protected void btnCadastrar_Click(object sender, EventArgs e)
     {
       if (this.IsFormValid("RegisterForm"))
@@ -29,9 +39,10 @@ namespace BugFeed.SignUp
             var userStore = new UserStore<Usuario>(unitOfWork.Context);
             var manager = new UserManager<Usuario>(userStore);
 
-            Usuario usuario = this.GetUsuario();
-            var result = manager.Create(usuario, this.CadastroUsuario.Senha);
+            this.ValidaUsernameEmail(manager, unitOfWork);
 
+            Usuario usuario = this.GetUsuario();
+            var result = manager.Create(usuario, this.Senha);
             if (result.Succeeded)
             {
               Empresa empresa = this.GetEmpresa();
@@ -66,16 +77,22 @@ namespace BugFeed.SignUp
       }
     }
 
+    private void ValidaUsernameEmail(UserManager<Usuario> aoManager, UnitOfWork aoUnitiOfWork)
+    {
+      Usuario loUsuario = aoManager.FindByEmail(this.txtEmail.Text);
+      if (loUsuario != null)
+        throw new ValidationException("Já existe uma conta associada a esse email.");
+    }
     private Usuario GetUsuario()
     {
       return new Usuario
       {
-        DataNascimento = this.CadastroUsuario.DataNascimento,
+        DataNascimento = this.dtDatePicker.DateTime,
         Ativo = true,
-        Nome = this.CadastroUsuario.Nome,
-        Email = this.CadastroUsuario.Email,
-        UserName = this.CadastroUsuario.Username,
-        Sobrenome = this.CadastroUsuario.Sobrenome
+        Nome = this.txtNome.Text,
+        Email = this.txtEmail.Text,
+        UserName = this.txtUsername.Text,
+        Sobrenome = this.txtSobrenome.Text
       };
     }
 
