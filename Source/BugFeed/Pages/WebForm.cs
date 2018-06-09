@@ -43,7 +43,7 @@ namespace BugFeed.Pages
     /// <param name="e"></param>
     protected void OnLoadPageControls(EventArgs e)
     {
-      this.AlertsPanel = (Panel)this.FindControlRecursive(this.Master, "pnAlerts");
+      this.AlertsPanel = (Panel)this.FindControlRecursive((Control) this.Master ?? this, "pnAlerts");
     }
 
     #region Alerts

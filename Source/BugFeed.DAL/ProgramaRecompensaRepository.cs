@@ -14,7 +14,7 @@ namespace BugFeed.DAL
 
     public List<ProgramaRecompensas> FindByEmpresa(Empresa empresa)
     {
-      return context.ProgramasRecompensas.Where(p => p.Empresa.Equals(empresa)).ToList();
+      return context.ProgramasRecompensas.Where(p => p.Empresa.EmpresaId == empresa.EmpresaId).ToList();
     }
   }
 }

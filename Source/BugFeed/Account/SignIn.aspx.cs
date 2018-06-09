@@ -26,13 +26,10 @@ namespace BugFeed
       if (!IsPostBack)
       {
         if (User.Identity.IsAuthenticated)
-        {
-          //TODO: Redirecionar de acordo com o perfil do usuário
-          this.Response.Redirect("~/Dashboard/Pesquisador/");
-        }
+          this.Response.Redirect(Urls.Dashboard);
       }
     }
-    
+
     protected void btnEntrar_Click(object sender, EventArgs e)
     {
       if (this.IsFormValid("LoginForm"))
@@ -41,7 +38,7 @@ namespace BugFeed
         {
           var userStore = new UserStore<Usuario>(new BugFeedContext());
           var userManager = new UserManager<Usuario>(userStore);
-          
+
           var user = userManager.Find(this.txtUsername.Text, this.txtPassword.Text);
 
           if (user != null)
@@ -56,14 +53,14 @@ namespace BugFeed
           {
             this.AddErrorAlert("Usuário ou senha incorretos.");
           }
-            
+
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
           this.AddErrorAlert(ex.Message);
         }
       }
     }
-    
+
   }
 }

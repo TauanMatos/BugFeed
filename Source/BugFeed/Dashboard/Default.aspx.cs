@@ -1,4 +1,5 @@
-﻿using BugFeed.Pages.Dashboard;
+﻿using BugFeed.DAL;
+using BugFeed.Pages.Dashboard;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,14 @@ namespace BugFeed.Dashboard
 {
   public partial class Default : DashboardPage
   {
-    protected void Page_Load(object sender, EventArgs e)
+    protected override void OnInit(EventArgs e)
     {
+      base.OnInit(e);
 
+      using (UnitOfWork unitOfWork = new UnitOfWork())
+      {
+
+      }
     }
   }
 }
