@@ -603,9 +603,7 @@
       <Name>BugFeed.Objects</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dashboard\Administrador\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Urls.resx">
       <Generator>ResXFileCodeGenerator</Generator>

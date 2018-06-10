@@ -31,11 +31,13 @@ namespace BugFeed.Dashboard.Programas
           programa.Estado = EstadoProgramaRecompensa.Ativo;
           programa.Descricao = this.txtDescricao.Text.Trim();
           programa.Empresa = usuario.Funcionario.Grupo.Empresa;
+          programa.Orcamento = Convert.ToDecimal(this.txtOrcamento.Text);
           programa.DataCriacao = DateTime.Now;
 
           unitOfWork.ProgramasRecompensas.Insert(programa);
           unitOfWork.Save();
           this.AddAlert("O programa de recompensas foi criado.");
+          this.LimparCampos();
         }
       }
       catch (Exception ex)
@@ -43,6 +45,14 @@ namespace BugFeed.Dashboard.Programas
         this.AddErrorAlert(ex.Message);
       }
     }
+
+    private void LimparCampos()
+    {
+      this.txtDescricao.Text = String.Empty;
+      this.txtOrcamento.Text = String.Empty;
+      this.txtTitulo.Text = String.Empty;
+    }
+
 
     protected void btCancelar_Click(object sender, EventArgs e)
     {

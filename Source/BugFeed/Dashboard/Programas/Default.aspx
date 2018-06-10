@@ -14,8 +14,7 @@
           <!--Responsive table-->
           <div class="col-sm-12">
             <div class="card card-table">
-              <div class="card-header">
-                <%--Responsive Table--%>
+<%--              <div class="card-header">
                 <div class="tools dropdown">
                   <span class="icon mdi mdi-download"></span><a href="#" role="button" data-toggle="dropdown" class="dropdown-toggle"><span class="icon mdi mdi-more-vert"></span></a>
                   <div role="menu" class="dropdown-menu">
@@ -24,7 +23,7 @@
                     <a href="#" class="dropdown-item">Separated link</a>
                   </div>
                 </div>
-              </div>
+              </div>--%>
               <div class="card-body">
                 <asp:Repeater runat="server" ID="rptProgramas" OnItemDataBound="rptProgramas_ItemDataBound">
                   <HeaderTemplate>
