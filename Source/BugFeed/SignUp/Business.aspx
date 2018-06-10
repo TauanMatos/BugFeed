@@ -12,7 +12,7 @@
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtCNPJ" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>CNPJ</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtSite" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Site</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtDestinatario" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Endereço</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
-<%--  <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtComplemento" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Complemento</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>--%>
+  <%--  <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtComplemento" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Complemento</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>--%>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtBairro" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Bairro</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtCidade" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Cidade</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtEstado" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Estado</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
@@ -147,9 +147,10 @@
                       </div>
                       <div class="form-group row">
                         <label class="col-12 col-sm-2 col-form-label text-left text-sm-right"></label>
+                        <asp:CheckBox Checked="true" ID="teste" runat="server" CssClass="custom-control-input" />
                         <div class="col-12 col-sm-8 col-lg-9">
                           <label class="custom-control custom-checkbox">
-                            <asp:CheckBox ID="cbxTermos" runat="server" CssClass="custom-control-input" /><span class="custom-control-label">Ao criar uma conta, você concorda com nossos <a href="#">termos e condições</a>.</span>
+                            <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Ao criar uma conta, você concorda com nossos <a href="#">termos e condições</a>.</span>
                           </label>
                         </div>
                       </div>

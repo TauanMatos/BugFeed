@@ -166,13 +166,13 @@ namespace BugFeed.SignUp {
         protected global::System.Web.UI.WebControls.TextBox txtPais;
         
         /// <summary>
-        /// cbxTermos control.
+        /// teste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxTermos;
+        protected global::System.Web.UI.WebControls.CheckBox teste;
         
         /// <summary>
         /// btnCadastrar control.
