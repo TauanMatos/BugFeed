@@ -1,5 +1,6 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
+using BugFeed.Pages;
 using BugFeed.Pages.Dashboard;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed.Dashboard.Programas
 {
-  public partial class AnalizarRelatorios : DashboardPage
+  public partial class AnalisarRelatorios : WebForm
   {
     protected override void OnLoad(EventArgs e)
     {
@@ -37,7 +38,7 @@ namespace BugFeed.Dashboard.Programas
         var divOrcamentoProgress = (HtmlGenericControl)e.Item.FindControl("divOrcamentoProgress");
         var tdData = (HtmlTableCell)e.Item.FindControl("tdData");
 
-        var lbEditar = (LinkButton)e.Item.FindControl("lbEditar");
+        var lbRelatorios = (LinkButton)e.Item.FindControl("lbRelatorios");
         //var tdQntRelatorios = (HtmlGenericControl)e.Item.FindControl("tdQntRelatorios");
 
         tdQntRelatorios.InnerText = programa.Relatorios.Count.ToString();
@@ -52,14 +53,14 @@ namespace BugFeed.Dashboard.Programas
 
         tdData.InnerText = programa.DataCriacao.ToShortDateString();
 
-        lbEditar.Command += LbEditar_Command;
-        lbEditar.CommandArgument = programa.ProgramaRecompensasId.ToString();
+        lbRelatorios.Command += LbRelatorios_Command;
+        lbRelatorios.CommandArgument = programa.ProgramaRecompensasId.ToString();
       }
     }
-    private void LbEditar_Command(object sender, CommandEventArgs e)
+    private void LbRelatorios_Command(object sender, CommandEventArgs e)
     {
       this.Session["ProgramaRecompensasId"] = e.CommandArgument;
-      throw new NotImplementedException();
+      this.Response.Redirect("");
     }
   }
 }

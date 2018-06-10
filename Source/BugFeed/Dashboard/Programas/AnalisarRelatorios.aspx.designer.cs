@@ -10,7 +10,7 @@
 namespace BugFeed.Dashboard.Programas {
     
     
-    public partial class AnalizarRelatorios {
+    public partial class AnalisarRelatorios {
         
         /// <summary>
         /// rptProgramas control.
