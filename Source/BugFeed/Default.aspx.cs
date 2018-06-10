@@ -9,9 +9,11 @@ namespace BugFeed
 {
   public partial class Default : System.Web.UI.Page
   {
-    protected void Page_Load(object sender, EventArgs e)
+    protected override void OnInit(EventArgs e)
     {
-
+      base.OnInit(e);
+      this.loggedInMenu.Visible = User.Identity.IsAuthenticated;
+      this.loggedOutMenu.Visible = !this.loggedInMenu.Visible;
     }
   }
 }

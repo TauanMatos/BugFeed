@@ -149,3 +149,55 @@
 /************************
   END: LOADER SPINNER
 ************************/
+
+html, body {
+  height: 100%;
+}
+
+.home-container {
+  background-image: url('../img/home.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+  .home-container .be-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+.featured-title {
+  font-size: 50pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50pt;
+  text-shadow: 0 0 15px #500000;
+}
+
+.featured-subtitle {
+  font-size: 15pt;
+  line-height: 15pt;
+  color: #ccc;
+  margin-top: 30px;
+}
+
+.home-buttons {
+  margin-top: 70px;
+  font-weight: bold;
+}
+
+  .home-buttons a {
+    border: 3px white solid;
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .home-buttons a:hover {
+    color: black;
+    background-color: white;
+  }
