@@ -15,21 +15,13 @@ namespace BugFeed.Pages.Dashboard
   public class DashboardPage : WebForm
   {
 
-    public Usuario GetUsuario(BugFeedContext context = null)
-    {
-      var userStore = new UserStore<Usuario>(context);
-      var userManager = new UserManager<Usuario>(userStore);
-      string userId = this.User.Identity.GetUserId();
-      return userManager.FindById(userId);
-    }
-
     protected override void OnInit(EventArgs e)
     {
       base.OnInit(e);
-      this.ValidateUser();
+      this.LoadUser();
     }
 
-    protected virtual void ValidateUser()
+    protected virtual void LoadUser()
     {
       if (!this.User.Identity.IsAuthenticated)
         this.Response.Redirect(Urls.SignIn);
@@ -37,7 +29,6 @@ namespace BugFeed.Pages.Dashboard
       {
         this.ValidatePermissions();
       }
-
     }
 
     protected virtual void ValidatePermissions()
@@ -46,5 +37,6 @@ namespace BugFeed.Pages.Dashboard
       if (!teste)
         this.Response.Redirect("~/Error/Unauthorized.aspx");
     }
+
   }
 }

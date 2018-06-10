@@ -59,7 +59,9 @@
                         <div class="btn-group btn-hspace">
                           <button type="button" data-toggle="dropdown" class="btn btn-secondary dropdown-toggle">Opções <span class="icon-dropdown mdi mdi-chevron-down"></span></button>
                           <div role="menu" class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Another action</a><a href="#" class="dropdown-item">Something else here</a>
+                            <asp:LinkButton runat="server" ID="lbEditar" CssClass="dropdown-item" Text="Editar"></asp:LinkButton>
+                            <a href="#" class="dropdown-item">Another action</a>
+                            <a href="#" class="dropdown-item">Something else here</a>
                             <div class="dropdown-divider"></div>
                             <a href="#" class="dropdown-item">Separated link</a>
                           </div>

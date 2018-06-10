@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/BaseMasterPage.master" AutoEventWireup="true" CodeBehind="DashboardMasterPage.master.cs" Inherits="BugFeed.MasterPages.Dashboard.DashboardMasterPage" %>
-
+<%@ Import Namespace="BugFeed.Objects.Extensions" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <div class="be-wrapper">
     <nav class="navbar navbar-expand fixed-top be-top-header">
@@ -19,15 +19,15 @@
           </ul>
 
           <!-- Page title -->
-          <div class="page-title"><span>Dashboard</span></div>
+          <div class="page-title"><span><%: Page.Title %></span></div>
 
           <ul class="nav navbar-nav float-right be-user-nav">
             <li class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                <img src="/assets/img/avatar_example.jpg" alt="Avatar"><span class="user-name">Tauan Maziero</span></a>
+                <img src="<%: this.Page.GetGravatarUrl(32) %>" alt="Avatar"><span class="user-name" ><%: Session["NomeSobrenome"] %></span></a>
               <div role="menu" class="dropdown-menu">
                 <div class="user-info">
-                  <div class="user-name">Tauan Maziero</div>
+                  <div class="user-name"><%: Session["NomeSobrenome"] %></div>
                 </div>
                 <a href="pages-profile.html" class="dropdown-item">
                   <span class="icon mdi mdi-face"></span>Perfil
@@ -43,8 +43,6 @@
           </ul>
         </div>
 
-        <!-- Left navbar (Used only when there is no left sidebar) -->
-        <a href="#" data-toggle="collapse" data-target="#be-navbar-collapse" class="be-toggle-top-header-menu collapsed">No Sidebar Left</a>
         <div id="be-navbar-collapse" class="navbar-collapse collapse">
           <!-- Default bootstrap navbar -->
         </div>
@@ -53,16 +51,16 @@
     </nav>
     <asp:ContentPlaceHolder ID="LeftSidebar" runat="server"></asp:ContentPlaceHolder>
     <div class="be-content">
-      <div class="page-head">
+      <%--<div class="page-head">
         <h2 class="page-head-title"><%: Page.Title %></h2>
-        <%--<nav aria-label="breadcrumb" role="navigation">
+        <nav aria-label="breadcrumb" role="navigation">
           <ol class="breadcrumb page-head-nav">
             <li class="breadcrumb-item"><a href="#">Página Inicial</a></li>
             <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
             <li class="breadcrumb-item active">Modals</li>
           </ol>
-        </nav>--%>
-      </div>
+        </nav>
+      </div>--%>
       <asp:ContentPlaceHolder ID="MainContent" runat="server">
       </asp:ContentPlaceHolder>
     </div>

@@ -15,6 +15,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System.Data.Entity.Core.Objects;
 using BugFeed.Properties;
+using BugFeed.Objects.Utils;
 
 namespace BugFeed
 {
@@ -26,7 +27,10 @@ namespace BugFeed
       if (!IsPostBack)
       {
         if (User.Identity.IsAuthenticated)
+        {
+          this.LoadProfileInfo();
           this.Response.Redirect(Urls.Dashboard);
+        }
       }
     }
 
@@ -62,5 +66,18 @@ namespace BugFeed
       }
     }
 
+    protected void LoadProfileInfo()
+    {
+      using (UnitOfWork unifOfWork = new UnitOfWork())
+      {
+        Usuario usuario = this.GetUsuario(unifOfWork.Context);
+        this.Session["Gravatar"] = MD5Hash.Calculate(usuario.Email.Trim().ToLower()).ToLower();
+        this.Session["Usuario"] = usuario.UserName;
+        this.Session["Nome"] = usuario.Nome;
+        this.Session["Sobrenome"] = usuario.Sobrenome;
+        this.Session["NomeSobrenome"] = usuario.Nome + " " + usuario.Sobrenome;
+        this.Session["DataNascimento"] = usuario.DataNascimento;
+      }
+    }
   }
 }

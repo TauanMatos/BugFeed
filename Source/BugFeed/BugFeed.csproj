@@ -598,6 +598,10 @@
       <Project>{d4cfc735-af3c-440f-a3e5-154818ae9d55}</Project>
       <Name>BugFeed.Database</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BugFeed.Objects\BugFeed.Objects.csproj">
+      <Project>{88265547-1752-4370-B836-2E6BE94613D6}</Project>
+      <Name>BugFeed.Objects</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dashboard\Administrador\" />

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" Title="Dashboard" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BugFeed.Dashboard.Pesquisador.Default" MasterPageFile="~/MasterPages/Dashboard/PesquisadorMasterPage.master" %>
 
+<%@ Import Namespace="BugFeed.Objects.Extensions" %>
+
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
   <div class="main-content container-fluid">
     <div class="user-profile">
@@ -11,25 +13,25 @@
             </div>
             <div class="user-display-bottom">
               <div class="user-display-avatar">
-                <img src="/assets/img/avatar_example.jpg" alt="Avatar">
+                <img src="<%: this.GetGravatarUrl(110) %>" alt="Avatar">
               </div>
               <div class="user-display-info">
-                <div class="name">Victor Brito</div>
-                <div class="nick"><span class="mdi mdi-account"></span>victorsebrito</div>
+                <div class="name"><%: Session["NomeSobrenome"] %></div>
+                <div class="nick"><span class="mdi mdi-account"></span><%: Session["Usuario"] %></div>
               </div>
-              <div class="row user-display-details">
-                <div class="col-4">
+              <div class="row user-display-details text-center">
+                <div class="col-6">
                   <div class="title">Relatórios</div>
                   <div class="counter">26</div>
                 </div>
-                <div class="col-4">
+                <div class="col-6">
                   <div class="title">Recompensas</div>
                   <div class="counter">18</div>
                 </div>
-                <div class="col-4">
+                <%--<div class="col-4">
                   <div class="title">Reputação</div>
                   <div class="counter">456</div>
-                </div>
+                </div>--%>
               </div>
             </div>
           </div>

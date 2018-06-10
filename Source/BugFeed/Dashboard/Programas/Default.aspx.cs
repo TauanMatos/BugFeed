@@ -43,6 +43,8 @@ namespace BugFeed.Dashboard.Programas
         var spnOrcamento = (HtmlGenericControl)e.Item.FindControl("spnOrcamento");
         var divOrcamentoProgress = (HtmlGenericControl)e.Item.FindControl("divOrcamentoProgress");
         var tdData = (HtmlTableCell)e.Item.FindControl("tdData");
+
+        var lbEditar = (LinkButton)e.Item.FindControl("lbEditar");
         //var tdQntRelatorios = (HtmlGenericControl)e.Item.FindControl("tdQntRelatorios");
 
         tdQntRelatorios.InnerText = programa.Relatorios.Count.ToString();
@@ -56,7 +58,16 @@ namespace BugFeed.Dashboard.Programas
         divOrcamentoProgress.Style[HtmlTextWriterStyle.Width] = porcentagem.ToString("0") + "%";
 
         tdData.InnerText = programa.DataCriacao.ToShortDateString();
+
+        lbEditar.Command += LbEditar_Command;
+        lbEditar.CommandArgument = programa.ProgramaRecompensasId.ToString();
       }
+    }
+
+    private void LbEditar_Command(object sender, CommandEventArgs e)
+    {
+      this.Session["ProgramaRecompensasId"] = e.CommandArgument;
+      throw new NotImplementedException();
     }
   }
 }

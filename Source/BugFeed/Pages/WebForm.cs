@@ -1,4 +1,7 @@
 ﻿using BugFeed.Controls.Elements;
+using BugFeed.Database;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +23,14 @@ namespace BugFeed.Pages
       base.OnLoad(e);
       this.OnLoadPageControls(e);
       this.ClearAlerts();
+    }
+
+    public Usuario GetUsuario(BugFeedContext context = null)
+    {
+      var userStore = new UserStore<Usuario>(context);
+      var userManager = new UserManager<Usuario>(userStore);
+      string userId = this.User.Identity.GetUserId();
+      return userManager.FindById(userId);
     }
 
     protected override void OnLoadComplete(EventArgs e)
