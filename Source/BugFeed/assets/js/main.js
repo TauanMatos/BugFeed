@@ -31,7 +31,11 @@ function initSummernote() {
 $(document).ready(function () {
   App.init();
   App.masks();
-  App.wizard();
+  try {
+    App.wizard();
+  }
+  catch{}
+  
   App.formElements();
   initSummernote();
 });
