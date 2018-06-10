@@ -12,7 +12,7 @@
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtCNPJ" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>CNPJ</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtSite" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Site</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtDestinatario" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Endereço</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
-  <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtComplemento" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Complemento</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
+<%--  <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtComplemento" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Complemento</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>--%>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtBairro" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Bairro</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtCidade" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Cidade</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
   <asp:RequiredFieldValidator SkinID="RequiredValidator" ControlToValidate="txtEstado" runat="server" ValidationGroup="RegisterForm" ErrorMessage="O campo <b>Estado</b> é obrigatório." EnableClientScript="false" Display="None"></asp:RequiredFieldValidator>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="form-group row">
                           <div class="col-sm-12" style="text-align: center">
-                            <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Next Step</button>
+                            <button data-wizard="#wizard1" class="btn btn-primary btn-space wizard-next">Próximo passo</button>
                           </div>
                         </div>
                       </div>
@@ -155,7 +155,7 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-12" style="text-align: center">
-                          <button data-wizard="#wizard1" class="btn btn-secondary btn-space wizard-previous">Previous</button>
+                          <button data-wizard="#wizard1" class="btn btn-secondary btn-space wizard-previous">Anterior</button>
                           <asp:Button runat="server" ID="btnCadastrar" CssClass="btn btn-primary btn-space" Text="Cadastrar" OnClick="btnCadastrar_Click" />
                         </div>
                       </div>
