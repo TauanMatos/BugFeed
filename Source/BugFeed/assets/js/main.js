@@ -21,21 +21,29 @@ function toggleLoader(visible) {
 }
 
 function initSummernote() {
-  $(".summernote").summernote({height: 300});
+  $(".summernote").summernote({ height: 300 });
   // When the summernote instance loses focus, update the content of your <textarea>
   $(".summernote").on('summernote.blur', function () {
     $('.summernote').html($('.summernote').summernote('code'));
   });
 }
 
-$(document).ready(function () {
-  App.init();
-  App.masks();
-  try {
-    App.wizard();
-  }
-  catch{}
-  
-  App.formElements();
-  initSummernote();
-});
+Sys.Application.add_load(BindEvents);
+
+function BindEvents() {
+  $(document).ready(function () {
+    App.init();
+    App.masks();
+    try {
+      App.wizard();
+    }
+    catch{ }
+
+    App.formElements();
+    initSummernote();
+
+    $(".currency").maskMoney({ prefix: 'R$ ', allowNegative: false, thousands: '.', decimal: ',', affixesStay: false });
+
+
+  });
+}
