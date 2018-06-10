@@ -39,8 +39,8 @@
                 <div id="wizard1" class="wizard wizard-ux">
                   <div class="steps-container">
                     <ul class="steps" style="margin-left: 0">
-                      <li data-step="1" class="active">Step 1<span class="chevron"></span></li>
-                      <li data-step="2" class="">Step 2<span class="chevron"></span></li>
+                      <li data-step="1" class="active">Primeiro passo<span class="chevron"></span></li>
+                      <li data-step="2" class="">Segundo passo<span class="chevron"></span></li>
                     </ul>
                   </div>
                   <div class="step-content">
