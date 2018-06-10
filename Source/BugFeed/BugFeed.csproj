@@ -291,6 +291,7 @@
     <Content Include="Controls\Elements\DatePicker.ascx" />
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
+    <Content Include="Dashboard\Pesquisador\EnviarRelatorio.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
     <Content Include="Dashboard\Programas\AnalizarRelatorios.aspx" />
     <Content Include="Dashboard\Pesquisador\ProgramasAbertos.aspx" />
@@ -373,12 +374,33 @@
     <Compile Include="Dashboard\Pesquisador\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\Pesquisador\EnviarRelatorio.aspx.cs">
+      <DependentUpon>EnviarRelatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\EnviarRelatorio.aspx.designer.cs">
+      <DependentUpon>EnviarRelatorio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\ProgramasAbertos.aspx.cs">
+      <DependentUpon>ProgramasAbertos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\ProgramasAbertos.aspx.designer.cs">
+      <DependentUpon>ProgramasAbertos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Programas\AnalizarRelatorios.aspx.cs">
+      <DependentUpon>AnalizarRelatorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Programas\AnalizarRelatorios.aspx.designer.cs">
+      <DependentUpon>AnalizarRelatorios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Programas\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

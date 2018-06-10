@@ -132,6 +132,9 @@
   <data name="NovoPrograma" xml:space="preserve">
     <value>~/Dashboard/Programas/Novo.aspx</value>
   </data>
+  <data name="ProgramasAbertos" xml:space="preserve">
+    <value>~/Dashboard/Pesquisador/ProgramasAbertos.aspx</value>
+  </data>
   <data name="SignIn" xml:space="preserve">
     <value>~/Account/SignIn.aspx</value>
   </data>
