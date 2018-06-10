@@ -160,6 +160,7 @@
       <DependentUpon>BugFeed.mdf</DependentUpon>
     </Content>
     <Content Include="assets\css\app.css" />
+    <Content Include="assets\img\home.jpg" />
     <Content Include="assets\img\Logo%402x.png" />
     <Content Include="assets\img\Logo.png" />
     <Content Include="assets\img\avatar_example.jpg" />
