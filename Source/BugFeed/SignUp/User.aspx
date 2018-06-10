@@ -17,13 +17,13 @@
                   <uc:CadastroUsuario runat="server" ID="CadastroUsuario"></uc:CadastroUsuario>
                   <div class="form-group pt-3 mb-3">
                     <label class="custom-control custom-checkbox">
-                      <asp:CheckBox ID="cbxTermos" runat="server" CssClass="custom-control-input" /><span class="custom-control-label">Ao criar uma conta, você concorda com nossos <a href="#">termos e condições</a>.</span>
+                      <input type="checkbox" ID="cbxTermos" runat="server" class="custom-control-input" /><span class="custom-control-label">Ao criar uma conta, você concorda com nossos <a href="#">termos e condições</a>.</span>
                     </label>
                   </div>
                   <div class="form-group pt-2">
                     <asp:Button runat="server" ID="btnCadastrar" CssClass="btn btn-block btn-primary btn-xl" Text="Cadastrar" OnClick="btnCadastrar_Click" />
                   </div>
-                  <div class="title"><span class="splash-title pb-3">Or</span></div>
+                  <%--<div class="title"><span class="splash-title pb-3">Or</span></div>
                   <div class="form-group row social-signup pt-0">
                     <div class="col-6">
                       <button type="button" class="btn btn-lg btn-block btn-social btn-facebook btn-color"><i class="mdi mdi-facebook icon icon-left"></i>Facebook</button>
@@ -31,7 +31,7 @@
                     <div class="col-6">
                       <button type="button" class="btn btn-lg btn-block btn-social btn-google-plus btn-color"><i class="mdi mdi-google-plus icon icon-left"></i>Google Plus</button>
                     </div>
-                  </div>
+                  </div>--%>
                 </div>
               </div>
               <div class="splash-footer">© 2018 BugFeed</div>
