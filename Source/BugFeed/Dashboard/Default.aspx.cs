@@ -1,5 +1,6 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
+using BugFeed.Pages;
 using BugFeed.Pages.Dashboard;
 using BugFeed.Properties;
 using System;
@@ -11,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed.Dashboard
 {
-  public partial class Default : DashboardPage
+  public partial class Default : WebForm
   {
     protected override void OnInit(EventArgs e)
     {

@@ -1,5 +1,6 @@
 ﻿using BugFeed.Controls.Elements;
 using BugFeed.Database;
+using BugFeed.Properties;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -18,11 +19,33 @@ namespace BugFeed.Pages
     private Panel AlertsPanel { get; set; }
     private List<Alert> Alerts { get; set; } = new List<Alert>();
 
+    protected override void OnInit(EventArgs e)
+    {
+      base.OnInit(e);
+      this.LoadUser();
+    }
     protected override void OnLoad(EventArgs e)
     {
       base.OnLoad(e);
       this.OnLoadPageControls(e);
       this.ClearAlerts();
+    }
+
+    protected virtual void LoadUser()
+    {
+      if (!this.User.Identity.IsAuthenticated)
+        this.Response.Redirect(Urls.SignIn);
+      else
+      {
+        this.ValidatePermissions();
+      }
+    }
+
+    protected virtual void ValidatePermissions()
+    {
+      var teste = true;
+      if (!teste)
+        this.Response.Redirect("~/Error/Unauthorized.aspx");
     }
 
     public Usuario GetUsuario(BugFeedContext context = null)

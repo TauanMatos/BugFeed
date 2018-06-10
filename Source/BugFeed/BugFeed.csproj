@@ -210,6 +210,8 @@
     <Content Include="assets\lib\material-design-icons\css\material-design-iconic-font.css" />
     <Content Include="assets\lib\material-design-icons\css\material-design-iconic-font.min.css" />
     <Content Include="assets\lib\material-design-icons\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="assets\lib\moneymask\js\jquery.maskMoney.js" />
+    <Content Include="assets\lib\moneymask\js\jquery.maskMoney.min.js" />
     <Content Include="assets\lib\perfect-scrollbar\css\perfect-scrollbar.css" />
     <Content Include="assets\lib\perfect-scrollbar\css\perfect-scrollbar.min.css" />
     <Content Include="assets\lib\perfect-scrollbar\js\perfect-scrollbar.jquery.js" />
@@ -292,7 +294,7 @@
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
-    <Content Include="Dashboard\Programas\AnalizarRelatorios.aspx" />
+    <Content Include="Dashboard\Programas\AnalisarRelatorios.aspx" />
     <Content Include="Dashboard\Programas\Default.aspx" />
     <Content Include="Dashboard\Programas\Novo.aspx" />
     <Content Include="Default.aspx" />
@@ -379,12 +381,12 @@
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Programas\AnalizarRelatorios.aspx.cs">
-      <DependentUpon>AnalizarRelatorios.aspx</DependentUpon>
+    <Compile Include="Dashboard\Programas\AnalisarRelatorios.aspx.cs">
+      <DependentUpon>AnalisarRelatorios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\Programas\AnalizarRelatorios.aspx.designer.cs">
-      <DependentUpon>AnalizarRelatorios.aspx</DependentUpon>
+    <Compile Include="Dashboard\Programas\AnalisarRelatorios.aspx.designer.cs">
+      <DependentUpon>AnalisarRelatorios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Programas\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
