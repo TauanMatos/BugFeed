@@ -123,6 +123,9 @@
   <data name="DashboardPesquisador" xml:space="preserve">
     <value>~/Dashboard/Pesquisador/</value>
   </data>
+  <data name="EnviarRelatorio" xml:space="preserve">
+    <value>~/Dashboard/Pesquisador/EnviarRelatorio.aspx</value>
+  </data>
   <data name="GerenciamentoProgramas" xml:space="preserve">
     <value>~/Dashboard/Programas/</value>
   </data>

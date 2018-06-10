@@ -292,6 +292,7 @@
     <Content Include="Controls\CadastroUsuarioControl.ascx" />
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
+    <Content Include="Dashboard\Pesquisador\ProgramasAbertos.aspx" />
     <Content Include="Dashboard\Programas\Default.aspx" />
     <Content Include="Dashboard\Programas\Novo.aspx" />
     <Content Include="Default.aspx" />
@@ -377,6 +378,13 @@
     </Compile>
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\ProgramasAbertos.aspx.cs">
+      <DependentUpon>ProgramasAbertos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\ProgramasAbertos.aspx.designer.cs">
+      <DependentUpon>ProgramasAbertos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Programas\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

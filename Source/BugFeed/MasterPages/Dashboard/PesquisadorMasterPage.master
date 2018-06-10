@@ -10,16 +10,16 @@
             <ul class="sidebar-elements">
               <li class="divider">Menu</li>
               <li>
-                <a href="#"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                <a href="/Dashboard/Pesquisador/"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
               </li>
               <li>
-                <a href="#"><i class="icon mdi mdi-collection-text"></i><span>Programas abertos</span></a>
+                <a href="/Dashboard/Pesquisador/ProgramasAbertos.aspx"><i class="icon mdi mdi-collection-text"></i><span>Programas abertos</span></a>
               </li>
               <li>
-                <a href="#"><i class="icon mdi mdi-comment-list"></i><span>Relatórios enviados</span></a>
+                <a href="/Dashboard/Pesquisador/RelatoriosEnviados.aspx"><i class="icon mdi mdi-comment-list"></i><span>Relatórios enviados</span></a>
               </li>
               <li>
-                <a href="#"><i class="icon mdi mdi-money"></i><span>Minhas recompensas</span></a>
+                <a href="/Dashboard/Pesquisador/Recompensas.aspx"><i class="icon mdi mdi-money"></i><span>Minhas recompensas</span></a>
               </li>
               <%--<li class="divider">Features</li>
               <li class="parent"><a href="#"><i class="icon mdi mdi-inbox"></i><span>Email</span></a>

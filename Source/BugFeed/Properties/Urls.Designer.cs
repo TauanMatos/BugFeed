@@ -79,6 +79,15 @@ namespace BugFeed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Pesquisador/EnviarRelatorio.aspx.
+        /// </summary>
+        internal static string EnviarRelatorio {
+            get {
+                return ResourceManager.GetString("EnviarRelatorio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/Dashboard/Programas/.
         /// </summary>
         internal static string GerenciamentoProgramas {
