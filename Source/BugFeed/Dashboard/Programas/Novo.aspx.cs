@@ -1,5 +1,6 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
+using BugFeed.Pages;
 using BugFeed.Pages.Dashboard;
 using BugFeed.Properties;
 using System;
@@ -11,13 +12,8 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed.Dashboard.Programas
 {
-  public partial class Novo : DashboardPage
+  public partial class Novo : WebForm
   {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
     protected void btSalvar_Click(object sender, EventArgs e)
     {
       try
