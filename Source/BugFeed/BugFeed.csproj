@@ -295,6 +295,7 @@
     <Content Include="Dashboard\Pesquisador\Default.aspx" />
     <Content Include="Dashboard\Pesquisador\EnviarRelatorio.aspx" />
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
+    <Content Include="Dashboard\Pesquisador\Recompensas.aspx" />
     <Content Include="Dashboard\Programas\AnalisarRelatorios.aspx" />
     <Content Include="Dashboard\Pesquisador\ProgramasAbertos.aspx" />
     <Content Include="Dashboard\Programas\Default.aspx" />
@@ -389,6 +390,13 @@
     </Compile>
     <Compile Include="Dashboard\Pesquisador\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\Recompensas.aspx.cs">
+      <DependentUpon>Recompensas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\Recompensas.aspx.designer.cs">
+      <DependentUpon>Recompensas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Programas\AnalisarRelatorios.aspx.cs">
       <DependentUpon>AnalisarRelatorios.aspx</DependentUpon>
@@ -606,6 +614,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\BugFeed20180610103031 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -30,6 +30,8 @@ namespace BugFeed.Database
     [Required]
     public DateTime Data { get; set; }
 
+    public virtual Recompensa Recompensa { get; set; }
+
     [Required]
     public EstadoRelatorioBug Estado { get; set; }
 

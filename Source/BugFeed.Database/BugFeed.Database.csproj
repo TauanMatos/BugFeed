@@ -77,6 +77,14 @@
     <Compile Include="Migrations\201806110102084_DataEnvioRelatorio.Designer.cs">
       <DependentUpon>201806110102084_DataEnvioRelatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806110118273_RecompensaRelatorio.cs" />
+    <Compile Include="Migrations\201806110118273_RecompensaRelatorio.Designer.cs">
+      <DependentUpon>201806110118273_RecompensaRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806110158000_EstadoRecompensa.cs" />
+    <Compile Include="Migrations\201806110158000_EstadoRecompensa.Designer.cs">
+      <DependentUpon>201806110158000_EstadoRecompensa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Permissao.cs" />
     <Compile Include="Pesquisador.cs" />
@@ -103,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806110102084_DataEnvioRelatorio.resx">
       <DependentUpon>201806110102084_DataEnvioRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806110118273_RecompensaRelatorio.resx">
+      <DependentUpon>201806110118273_RecompensaRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806110158000_EstadoRecompensa.resx">
+      <DependentUpon>201806110158000_EstadoRecompensa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
