@@ -11,6 +11,7 @@ namespace BugFeed.DAL
     private PesquisadorRepository pesquisadorRepository;
     private FuncionarioRepository ioFuncionarioRepository;
     private RelatorioBugRepository relatorioBugRepository;
+    private RecompensaRepository recompensaRepository;
 
     public FuncionarioRepository Funcionario
     {
@@ -67,6 +68,18 @@ namespace BugFeed.DAL
           this.relatorioBugRepository = new RelatorioBugRepository(Context);
         }
         return relatorioBugRepository;
+      }
+    }
+
+    public RecompensaRepository Recompensas
+    {
+      get
+      {
+        if (this.recompensaRepository == null)
+        {
+          this.recompensaRepository = new RecompensaRepository(Context);
+        }
+        return recompensaRepository;
       }
     }
 

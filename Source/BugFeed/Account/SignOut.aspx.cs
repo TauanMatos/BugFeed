@@ -14,6 +14,7 @@ namespace BugFeed
     {
       var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
       authenticationManager.SignOut();
+      this.Session.Clear();
       Response.Redirect("~/");
     }
   }

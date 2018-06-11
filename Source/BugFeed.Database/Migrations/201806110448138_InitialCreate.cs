@@ -3,7 +3,7 @@ namespace BugFeed.Database.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AtualizacaoModelo : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -135,8 +135,9 @@ namespace BugFeed.Database.Migrations
                         Estado = c.Int(nullable: false),
                         Titulo = c.String(nullable: false),
                         Descricao = c.String(nullable: false),
+                        Orcamento = c.Decimal(nullable: false, precision: 18, scale: 2),
                         DataCriacao = c.DateTime(nullable: false),
-                        UltimaRevisao = c.DateTime(nullable: false),
+                        UltimaRevisao = c.DateTime(),
                         Empresa_EmpresaId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ProgramaRecompensasId)
@@ -144,24 +145,21 @@ namespace BugFeed.Database.Migrations
                 .Index(t => t.Empresa_EmpresaId);
             
             CreateTable(
-                "dbo.Recompensas",
+                "dbo.RelatorioBugs",
                 c => new
                     {
-                        RecompensaId = c.Int(nullable: false, identity: true),
-                        Valor = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Processada = c.Boolean(nullable: false),
-                        Avaliador_FuncionarioId = c.Int(),
-                        Pagador_FuncionarioId = c.Int(),
-                        Pesquisador_PesquisadorId = c.Int(),
+                        RelatorioBugId = c.Int(nullable: false, identity: true),
+                        Titulo = c.String(nullable: false, maxLength: 150),
+                        Descricao = c.String(nullable: false),
+                        Impacto = c.String(nullable: false),
+                        Data = c.DateTime(nullable: false),
+                        Estado = c.Int(nullable: false),
+                        Pesquisador_PesquisadorId = c.Int(nullable: false),
                         Programa_ProgramaRecompensasId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.RecompensaId)
-                .ForeignKey("dbo.Funcionarios", t => t.Avaliador_FuncionarioId)
-                .ForeignKey("dbo.Funcionarios", t => t.Pagador_FuncionarioId)
-                .ForeignKey("dbo.Pesquisadors", t => t.Pesquisador_PesquisadorId)
+                .PrimaryKey(t => t.RelatorioBugId)
+                .ForeignKey("dbo.Pesquisadors", t => t.Pesquisador_PesquisadorId, cascadeDelete: true)
                 .ForeignKey("dbo.ProgramaRecompensas", t => t.Programa_ProgramaRecompensasId, cascadeDelete: true)
-                .Index(t => t.Avaliador_FuncionarioId)
-                .Index(t => t.Pagador_FuncionarioId)
                 .Index(t => t.Pesquisador_PesquisadorId)
                 .Index(t => t.Programa_ProgramaRecompensasId);
             
@@ -227,22 +225,22 @@ namespace BugFeed.Database.Migrations
                 .Index(t => t.Pesquisador_PesquisadorId);
             
             CreateTable(
-                "dbo.RelatorioBugs",
+                "dbo.Recompensas",
                 c => new
                     {
-                        RelatorioBugId = c.Int(nullable: false, identity: true),
-                        Titulo = c.String(nullable: false, maxLength: 150),
-                        Descricao = c.String(nullable: false),
-                        Impacto = c.String(nullable: false),
+                        RecompensaId = c.Int(nullable: false),
+                        Valor = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Estado = c.Int(nullable: false),
-                        Pesquisador_PesquisadorId = c.Int(nullable: false),
-                        Programa_ProgramaRecompensasId = c.Int(nullable: false),
+                        Avaliador_FuncionarioId = c.Int(nullable: false),
+                        Pagador_FuncionarioId = c.Int(),
                     })
-                .PrimaryKey(t => t.RelatorioBugId)
-                .ForeignKey("dbo.Pesquisadors", t => t.Pesquisador_PesquisadorId, cascadeDelete: true)
-                .ForeignKey("dbo.ProgramaRecompensas", t => t.Programa_ProgramaRecompensasId, cascadeDelete: true)
-                .Index(t => t.Pesquisador_PesquisadorId)
-                .Index(t => t.Programa_ProgramaRecompensasId);
+                .PrimaryKey(t => t.RecompensaId)
+                .ForeignKey("dbo.Funcionarios", t => t.Avaliador_FuncionarioId, cascadeDelete: true)
+                .ForeignKey("dbo.Funcionarios", t => t.Pagador_FuncionarioId)
+                .ForeignKey("dbo.RelatorioBugs", t => t.RecompensaId)
+                .Index(t => t.RecompensaId)
+                .Index(t => t.Avaliador_FuncionarioId)
+                .Index(t => t.Pagador_FuncionarioId);
             
             CreateTable(
                 "dbo.Permissaos",
@@ -304,19 +302,18 @@ namespace BugFeed.Database.Migrations
             DropForeignKey("dbo.Funcionarios", "Grupo_GrupoFuncionariosId", "dbo.GrupoFuncionarios");
             DropForeignKey("dbo.Permissaos", "GrupoFuncionarios_GrupoFuncionariosId", "dbo.GrupoFuncionarios");
             DropForeignKey("dbo.GrupoFuncionarios", "Empresa_EmpresaId", "dbo.Empresas");
+            DropForeignKey("dbo.Recompensas", "RecompensaId", "dbo.RelatorioBugs");
+            DropForeignKey("dbo.Recompensas", "Pagador_FuncionarioId", "dbo.Funcionarios");
+            DropForeignKey("dbo.Recompensas", "Avaliador_FuncionarioId", "dbo.Funcionarios");
             DropForeignKey("dbo.RelatorioBugs", "Programa_ProgramaRecompensasId", "dbo.ProgramaRecompensas");
             DropForeignKey("dbo.RelatorioBugs", "Pesquisador_PesquisadorId", "dbo.Pesquisadors");
-            DropForeignKey("dbo.Comentarios", "Relatorio_RelatorioBugId", "dbo.RelatorioBugs");
-            DropForeignKey("dbo.Recompensas", "Programa_ProgramaRecompensasId", "dbo.ProgramaRecompensas");
             DropForeignKey("dbo.Pesquisadors", "Usuario_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.Retiradas", "Pesquisador_PesquisadorId", "dbo.Pesquisadors");
             DropForeignKey("dbo.Retiradas", "DadosBancarios_DadosBancariosId", "dbo.DadosBancarios");
-            DropForeignKey("dbo.Recompensas", "Pesquisador_PesquisadorId", "dbo.Pesquisadors");
             DropForeignKey("dbo.Formacaos", "Pesquisador_PesquisadorId", "dbo.Pesquisadors");
             DropForeignKey("dbo.Pesquisadors", "Endereco_EnderecoId", "dbo.Enderecoes");
             DropForeignKey("dbo.DadosBancarios", "Pesquisador_PesquisadorId", "dbo.Pesquisadors");
-            DropForeignKey("dbo.Recompensas", "Pagador_FuncionarioId", "dbo.Funcionarios");
-            DropForeignKey("dbo.Recompensas", "Avaliador_FuncionarioId", "dbo.Funcionarios");
+            DropForeignKey("dbo.Comentarios", "Relatorio_RelatorioBugId", "dbo.RelatorioBugs");
             DropForeignKey("dbo.ProgramaRecompensas", "Empresa_EmpresaId", "dbo.Empresas");
             DropForeignKey("dbo.Comentarios", "Programa_ProgramaRecompensasId", "dbo.ProgramaRecompensas");
             DropForeignKey("dbo.Empresas", "Endereco_EnderecoId", "dbo.Enderecoes");
@@ -325,18 +322,17 @@ namespace BugFeed.Database.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.Permissaos", new[] { "GrupoFuncionarios_GrupoFuncionariosId" });
-            DropIndex("dbo.RelatorioBugs", new[] { "Programa_ProgramaRecompensasId" });
-            DropIndex("dbo.RelatorioBugs", new[] { "Pesquisador_PesquisadorId" });
+            DropIndex("dbo.Recompensas", new[] { "Pagador_FuncionarioId" });
+            DropIndex("dbo.Recompensas", new[] { "Avaliador_FuncionarioId" });
+            DropIndex("dbo.Recompensas", new[] { "RecompensaId" });
             DropIndex("dbo.Retiradas", new[] { "Pesquisador_PesquisadorId" });
             DropIndex("dbo.Retiradas", new[] { "DadosBancarios_DadosBancariosId" });
             DropIndex("dbo.Formacaos", new[] { "Pesquisador_PesquisadorId" });
             DropIndex("dbo.DadosBancarios", new[] { "Pesquisador_PesquisadorId" });
             DropIndex("dbo.Pesquisadors", new[] { "Usuario_Id" });
             DropIndex("dbo.Pesquisadors", new[] { "Endereco_EnderecoId" });
-            DropIndex("dbo.Recompensas", new[] { "Programa_ProgramaRecompensasId" });
-            DropIndex("dbo.Recompensas", new[] { "Pesquisador_PesquisadorId" });
-            DropIndex("dbo.Recompensas", new[] { "Pagador_FuncionarioId" });
-            DropIndex("dbo.Recompensas", new[] { "Avaliador_FuncionarioId" });
+            DropIndex("dbo.RelatorioBugs", new[] { "Programa_ProgramaRecompensasId" });
+            DropIndex("dbo.RelatorioBugs", new[] { "Pesquisador_PesquisadorId" });
             DropIndex("dbo.ProgramaRecompensas", new[] { "Empresa_EmpresaId" });
             DropIndex("dbo.Empresas", new[] { "Endereco_EnderecoId" });
             DropIndex("dbo.GrupoFuncionarios", new[] { "Empresa_EmpresaId" });
@@ -351,12 +347,12 @@ namespace BugFeed.Database.Migrations
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.Permissaos");
-            DropTable("dbo.RelatorioBugs");
+            DropTable("dbo.Recompensas");
             DropTable("dbo.Retiradas");
             DropTable("dbo.Formacaos");
             DropTable("dbo.DadosBancarios");
             DropTable("dbo.Pesquisadors");
-            DropTable("dbo.Recompensas");
+            DropTable("dbo.RelatorioBugs");
             DropTable("dbo.ProgramaRecompensas");
             DropTable("dbo.Enderecoes");
             DropTable("dbo.Empresas");

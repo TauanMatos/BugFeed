@@ -23,5 +23,6 @@ namespace BugFeed.Database
     public DbSet<Comentario> Comentarios { get; set; }
     public DbSet<Funcionario> Funcionarios { get; set; }
     public DbSet<Pesquisador> Pesquisadores { get; set; }
+    public DbSet<Recompensa> Recompensas { get; set; }
   }
 }

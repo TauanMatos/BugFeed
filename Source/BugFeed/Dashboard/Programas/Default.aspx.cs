@@ -50,7 +50,7 @@ namespace BugFeed.Dashboard.Programas
 
         tdQntRelatorios.InnerText = programa.Relatorios.Count.ToString();
 
-        decimal valorGasto = programa.Recompensas.Sum(r => r.Valor);
+        decimal valorGasto = programa.Relatorios.Select(r => r.Recompensa).Where(r => r != null).Sum(r => r.Valor);
         spnOrcamento.InnerText = String.Format("R$ {0} / {1}",
           valorGasto,
           programa.Orcamento);

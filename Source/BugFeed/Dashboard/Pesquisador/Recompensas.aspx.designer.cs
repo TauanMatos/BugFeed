@@ -13,6 +13,24 @@ namespace BugFeed.Dashboard.Pesquisador {
     public partial class Recompensas {
         
         /// <summary>
+        /// pnAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnAlerts;
+        
+        /// <summary>
+        /// btRetirar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btRetirar;
+        
+        /// <summary>
         /// rptRecompensas control.
         /// </summary>
         /// <remarks>
