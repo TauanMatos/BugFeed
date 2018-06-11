@@ -20,17 +20,11 @@ namespace BugFeed.Dashboard.Pesquisador
       {
         string userId = User.Identity.GetUserId();
         List<RelatorioBug> relatorios = unitOfWork.RelatoriosBug.Get(r => r.Pesquisador.Usuario.Id == userId && r.Recompensa != null).ToList();
-        this.rptRecompensas.ItemCommand += RptRecompensas_ItemCommand;
         this.rptRecompensas.DataSource = relatorios;
         this.rptRecompensas.DataBind();
       }
     }
 
-    private void RptRecompensas_ItemCommand(object source, RepeaterCommandEventArgs e)
-    {
-      if (e.CommandName == "Retirar")
-        this.Retirar(e);
-    }
 
     private void Retirar(RepeaterCommandEventArgs e)
     {

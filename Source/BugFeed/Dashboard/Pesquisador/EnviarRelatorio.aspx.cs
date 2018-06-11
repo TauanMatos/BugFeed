@@ -48,7 +48,7 @@ namespace BugFeed.Dashboard.Pesquisador
             Titulo = this.txtTitulo.Text.Trim(),
             Impacto = this.txtImpacto.Text.Trim(),
             Descricao = this.txtDescricao.Text.Trim(),
-            Estado = EstadoRelatorioBug.Enviado,
+            Estado = EstadoRelatorioBug.EmAnalise,
             Pesquisador = usuario.Pesquisador,
             Programa = programa,
             Data = DateTime.Now

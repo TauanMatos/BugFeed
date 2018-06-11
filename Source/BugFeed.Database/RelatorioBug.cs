@@ -40,9 +40,9 @@ namespace BugFeed.Database
 
   public enum EstadoRelatorioBug
   {
-    Enviado,
     [Description("Em Análise")]
     EmAnalise,
+    Recusado,
     [Description("Concluído")]
     Concluido
   }

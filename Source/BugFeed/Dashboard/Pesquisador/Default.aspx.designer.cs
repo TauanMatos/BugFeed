@@ -11,5 +11,32 @@ namespace BugFeed.Dashboard.Pesquisador {
     
     
     public partial class Default {
+        
+        /// <summary>
+        /// divRelatorios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRelatorios;
+        
+        /// <summary>
+        /// divRecompensas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRecompensas;
+        
+        /// <summary>
+        /// rptRelatorios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptRelatorios;
     }
 }

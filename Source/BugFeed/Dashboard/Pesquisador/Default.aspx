@@ -22,11 +22,11 @@
               <div class="row user-display-details text-center">
                 <div class="col-6">
                   <div class="title">Relatórios</div>
-                  <div class="counter">26</div>
+                  <div class="counter" id="divRelatorios" runat="server"></div>
                 </div>
                 <div class="col-6">
                   <div class="title">Recompensas</div>
-                  <div class="counter">18</div>
+                  <div class="counter" id="divRecompensas" runat="server"></div>
                 </div>
                 <%--<div class="col-4">
                   <div class="title">Reputação</div>
@@ -35,7 +35,7 @@
               </div>
             </div>
           </div>
-          <div class="user-info-list card">
+          <%--<div class="user-info-list card">
             <div class="card-header card-header-divider">
               Sobre Mim
               <span class="card-subtitle">Eu gosto de ler livros, ouvir músicas e praticar esportes. Acho bugs nas horas vagas.</span>
@@ -66,119 +66,60 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          </div>--%>
         </div>
         <div class="col-lg-7">
-          <div class="card card-table">
-            <div class="card-header">
-              <%--<div class="tools dropdown"> <span class="icon mdi mdi-download"></span><a href="#" role="button" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"><span class="icon mdi mdi-more-vert"></span></a>
+          <asp:Repeater runat="server" ID="rptRelatorios" OnItemDataBound="rptRelatorios_ItemDataBound">
+            <HeaderTemplate>
+              <div class="card card-table">
+                <div class="card-header">
+                  <%--<div class="tools dropdown"> <span class="icon mdi mdi-download"></span><a href="#" role="button" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false"><span class="icon mdi mdi-more-vert"></span></a>
                     <div role="menu" class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(19px, 25px, 0px); top: 0px; left: 0px; will-change: transform;"><a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Another action</a><a href="#" class="dropdown-item">Something else here</a>
                       <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Separated link</a>
                     </div>
                   </div>--%>
-              <div class="title">Últimos relatórios</div>
-            </div>
-            <div class="card-body table-responsive">
-              <table class="table table-striped table-borderless">
-                <thead>
-                  <tr>
-                    <th style="width: 40%;">Programa</th>
-                    <th>Empresa</th>
-                    <th style="width: 20%;">Data</th>
-                    <th style="width: 20%;">Estado</th>
-                    <th style="width: 5%;" class="actions"></th>
-                  </tr>
-                </thead>
-                <tbody class="no-border-x">
-                  <tr>
-                    <td>Xperia M4</td>
-                    <td>Sony</td>
-                    <td>23/02/2018</td>
-                    <td class="text-success">Aceito</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Gmail</td>
-                    <td>Google</td>
-                    <td>16/12/2017</td>
-                    <td class="text-success">Aceito</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Aplicativo iOS</td>
-                    <td>Starbucks</td>
-                    <td>25/08/2017</td>
-                    <td class="text-warning">Em análise</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Xperia M4</td>
-                    <td>Sony</td>
-                    <td>23/02/2018</td>
-                    <td class="text-success">Aceito</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Gmail</td>
-                    <td>Google</td>
-                    <td>16/12/2017</td>
-                    <td class="text-danger">Recusado</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Aplicativo iOS</td>
-                    <td>Starbucks</td>
-                    <td>25/08/2017</td>
-                    <td class="text-warning">Em análise</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Xperia M4</td>
-                    <td>Sony</td>
-                    <td>23/02/2018</td>
-                    <td class="text-success">Aceito</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Gmail</td>
-                    <td>Google</td>
-                    <td>16/12/2017</td>
-                    <td class="text-danger">Recusado</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Aplicativo iOS</td>
-                    <td>Starbucks</td>
-                    <td>25/08/2017</td>
-                    <td class="text-danger">Recusado</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Xperia M4</td>
-                    <td>Sony</td>
-                    <td>23/02/2018</td>
-                    <td class="text-success">Aceito</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>Gmail</td>
-                    <td>Google</td>
-                    <td>16/12/2017</td>
-                    <td class="text-danger">Recusado</td>
-                    <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>
-                  </tr>
-                </tbody>
+                  <div class="title">Últimos relatórios</div>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                      <tr>
+                        <th>Título</th>
+                        <th>Empresa</th>
+                        <th>Programa</th>
+                        <th class="text-center">Data</th>
+                        <th>Estado</th>
+<%--                        <th style="width: 5%;" class="actions"></th>--%>
+                      </tr>
+                    </thead>
+                    <tbody class="no-border-x">
+            </HeaderTemplate>
+            <ItemTemplate>
+              <tr>
+                <td><%# Eval("Titulo") %></td>
+                <td><%# Eval("Programa.Empresa.Nome") %></td>
+                <td><%# Eval("Programa.Titulo") %></td>
+                <td class="text-center" id="tdData" runat="server"></td>
+                <td id="tdEstado" runat="server"></td>
+<%--                <td class="actions"><a href="#" class="icon"><i class="mdi mdi-plus-circle-o"></i></a></td>--%>
+              </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+              </tbody>
               </table>
             </div>
-          </div>
+              </div>
+            </FooterTemplate>
+          </asp:Repeater>
         </div>
-      </div>
-      <div class="row">
+    </div>
+    <%--      <div class="row">
         <div class="col-lg-6">
           <div class="widget widget-calendar">
             <div id="calendar-widget" class="hasDatepicker">
               <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
-                <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Maio</span>&nbsp;<span class="ui-datepicker-year">2018</span></div>
+                <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+                  <a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Maio</span>&nbsp;<span class="ui-datepicker-year">2018</span></div>
                 </div>
                 <table class="ui-datepicker-calendar">
                   <thead>
@@ -246,7 +187,7 @@
         </div>
         <div class="col-lg-6">
           <div class="card">
-            <div class="card-header card-header-divider">Últimas Atividades<%--<span class="card-subtitle">This is a custom timeline widget</span>--%></div>
+            <div class="card-header card-header-divider">Últimas Atividades<%--<span class="card-subtitle">This is a custom timeline widget</span></div>
             <div class="card-body">
               <ul class="user-timeline">
                 <li class="latest">
@@ -268,7 +209,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>--%>
+  </div>
   </div>
 </asp:Content>
