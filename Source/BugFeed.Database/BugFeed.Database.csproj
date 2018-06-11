@@ -61,29 +61,9 @@
     <Compile Include="Formacao.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="GrupoFuncionario.cs" />
-    <Compile Include="Migrations\201806022127477_AtualizacaoModelo.cs" />
-    <Compile Include="Migrations\201806022127477_AtualizacaoModelo.Designer.cs">
-      <DependentUpon>201806022127477_AtualizacaoModelo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806031309029_UltimaRevisaoNull.cs" />
-    <Compile Include="Migrations\201806031309029_UltimaRevisaoNull.Designer.cs">
-      <DependentUpon>201806031309029_UltimaRevisaoNull.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.cs" />
-    <Compile Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.Designer.cs">
-      <DependentUpon>201806092112037_ProgramaRecompensaOrcamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110102084_DataEnvioRelatorio.cs" />
-    <Compile Include="Migrations\201806110102084_DataEnvioRelatorio.Designer.cs">
-      <DependentUpon>201806110102084_DataEnvioRelatorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110118273_RecompensaRelatorio.cs" />
-    <Compile Include="Migrations\201806110118273_RecompensaRelatorio.Designer.cs">
-      <DependentUpon>201806110118273_RecompensaRelatorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806110158000_EstadoRecompensa.cs" />
-    <Compile Include="Migrations\201806110158000_EstadoRecompensa.Designer.cs">
-      <DependentUpon>201806110158000_EstadoRecompensa.cs</DependentUpon>
+    <Compile Include="Migrations\201806110448138_InitialCreate.cs" />
+    <Compile Include="Migrations\201806110448138_InitialCreate.Designer.cs">
+      <DependentUpon>201806110448138_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Permissao.cs" />
@@ -100,23 +80,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806022127477_AtualizacaoModelo.resx">
-      <DependentUpon>201806022127477_AtualizacaoModelo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806031309029_UltimaRevisaoNull.resx">
-      <DependentUpon>201806031309029_UltimaRevisaoNull.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806092112037_ProgramaRecompensaOrcamento.resx">
-      <DependentUpon>201806092112037_ProgramaRecompensaOrcamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110102084_DataEnvioRelatorio.resx">
-      <DependentUpon>201806110102084_DataEnvioRelatorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110118273_RecompensaRelatorio.resx">
-      <DependentUpon>201806110118273_RecompensaRelatorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806110158000_EstadoRecompensa.resx">
-      <DependentUpon>201806110158000_EstadoRecompensa.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806110448138_InitialCreate.resx">
+      <DependentUpon>201806110448138_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

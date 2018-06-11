@@ -29,7 +29,7 @@
                 <div class="user-info">
                   <div class="user-name"><%: Session["NomeSobrenome"] %></div>
                 </div>
-                <a href="pages-profile.html" class="dropdown-item">
+                <a href="#" class="dropdown-item">
                   <span class="icon mdi mdi-face"></span>Perfil
                 </a>
                 <a href="#" class="dropdown-item">

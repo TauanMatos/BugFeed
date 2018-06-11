@@ -33,8 +33,7 @@ namespace BugFeed.Database
     public virtual List<RelatorioBug> Relatorios { get; set; }
 
     public virtual List<ComentarioPrograma> Comentarios { get; set; }
-
-    public virtual List<Recompensa> Recompensas { get; set; }
+    
   }
 
   public enum EstadoProgramaRecompensa

@@ -42,6 +42,7 @@ namespace BugFeed.Database
   {
     [Description("Em Análise")]
     EmAnalise,
+    [Description("Recusado")]
     Recusado,
     [Description("Concluído")]
     Concluido

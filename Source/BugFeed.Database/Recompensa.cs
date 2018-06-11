@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace BugFeed.Database
     public virtual Funcionario Pagador { get; set; }
 
     [Required]
+    [ForeignKey("RecompensaId")]
     public virtual RelatorioBug Relatorio { get; set; }
 
     [Required]
@@ -30,7 +32,9 @@ namespace BugFeed.Database
   {
     [Description("A Retirar")]
     ARetirar,
+    [Description("Processando")]
     Processando,
+    [Description("Processada")]
     Processada
   }
 }

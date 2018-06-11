@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\EstadoRecompensaExtensions.cs" />
     <Compile Include="Extensions\EstadoRelatorioBugExtensions.cs" />
     <Compile Include="Extensions\PageExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

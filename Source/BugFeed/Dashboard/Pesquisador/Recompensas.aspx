@@ -5,6 +5,12 @@
   <asp:UpdatePanel runat="server">
     <ContentTemplate>
       <div class="main-content container-fluid">
+        <asp:Panel ID="pnAlerts" runat="server"></asp:Panel>
+        <div class="row text-right">
+          <div class="col-12">
+            <asp:Button CssClass="btn btn-space btn-primary" runat="server" ID="btRetirar" OnClick="btRetirar_Click" Text="Retirar" />
+          </div>
+        </div>
         <div class="row mt-3"></div>
         <div class="row">
           <!--Responsive table-->
@@ -23,7 +29,6 @@
                             <th style="width: 15%;">Programa</th>
                             <th style="width: 10%;" class="text-center">Valor</th>
                             <th style="width: 10%;">Estado</th>
-                            <th style="width: 10%;"></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -38,8 +43,8 @@
                       <td><%# Eval("Titulo") %></td>
                       <td><%# Eval("Programa.Empresa.Nome") %></td>
                       <td><%# Eval("Programa.Titulo") %></td>
-                      <td class="center" id="tdValor" runat="server"></td>
-                      <td><%# Eval("Recompensa.Estado") %></td>
+                      <td class="text-center" id="tdValor" runat="server"></td>
+                      <td id="tdEstado" runat="server"></td>
                     </tr>
                   </ItemTemplate>
                   <FooterTemplate>

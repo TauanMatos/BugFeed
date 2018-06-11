@@ -3,8 +3,12 @@
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
   <asp:UpdatePanel runat="server">
     <ContentTemplate>
-      <asp:Panel ID="pnAlerts" runat="server"></asp:Panel>
       <div class="main-content container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <asp:Panel ID="pnAlerts" runat="server"></asp:Panel>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-12">
             <div class="card card-border-color card-border-color-primary">

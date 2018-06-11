@@ -16,8 +16,6 @@ namespace BugFeed.Database
 
     public virtual List<DadosBancarios> DadosBancarios { get; set; }
 
-    public virtual List<Recompensa> Recompensas { get; set; }
-
     public virtual List<Retirada> Retiradas { get; set; }
 
     [Required]
