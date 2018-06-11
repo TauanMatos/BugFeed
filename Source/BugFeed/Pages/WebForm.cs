@@ -1,5 +1,7 @@
 ﻿using BugFeed.Controls.Elements;
+using BugFeed.DAL;
 using BugFeed.Database;
+using BugFeed.Objects.Utils;
 using BugFeed.Properties;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -22,6 +24,8 @@ namespace BugFeed.Pages
     protected override void OnInit(EventArgs e)
     {
       base.OnInit(e);
+      if (User.Identity.IsAuthenticated && this.Session["LoadedProfile"] == null)
+        this.LoadProfileInfo();
     }
     protected override void OnLoad(EventArgs e)
     {
@@ -182,6 +186,21 @@ namespace BugFeed.Pages
       });
 
       return notValidValidators.Count == 0;
+    }
+
+    protected void LoadProfileInfo()
+    {
+      using (UnitOfWork unifOfWork = new UnitOfWork())
+      {
+        Usuario usuario = this.GetUsuario(unifOfWork.Context);
+        this.Session["Gravatar"] = MD5Hash.Calculate(usuario.Email.Trim().ToLower()).ToLower();
+        this.Session["Usuario"] = usuario.UserName;
+        this.Session["Nome"] = usuario.Nome;
+        this.Session["Sobrenome"] = usuario.Sobrenome;
+        this.Session["NomeSobrenome"] = usuario.Nome + " " + usuario.Sobrenome;
+        this.Session["DataNascimento"] = usuario.DataNascimento;
+        this.Session["LoadedProfile"] = true;
+      }
     }
   }
 }
