@@ -16,11 +16,11 @@
                       <table class="table table-striped table-hover">
                         <thead>
                           <tr>
-                            <th style="width: 15%;">Empresa</th>
-                            <th style="width: 25%;">Título</th>
-                            <th style="width: 15%;" class="text-center">Relatórios Enviados</th>
-                            <th style="width: 10%;">Criado em</th>
-                            <th style="width: 10%;"></th>
+                            <th>Empresa</th>
+                            <th>Título</th>
+                            <th class="text-center">Relatórios Enviados</th>
+                            <th>Criado em</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -32,8 +32,8 @@
                       <td runat="server" id="tdQntRelatorios" class="text-center"></td>
                       <td runat="server" id="tdData"></td>
                       <td>
-
-                        <asp:Button ID="btEnviarRelatorio" runat="server" CssClass="btn btn-secondary btn-space wizard-previous" Text="Enviar Relatório" UseSubmitBehavior="false" CommandName="Editar"></asp:Button>
+                        <asp:Button ID="btVerRelatorio" runat="server" CssClass="btn btn-secondary btn-space" Text="Ver" UseSubmitBehavior="false" CommandName="Ver"></asp:Button>
+                        <asp:Button ID="btEnviarRelatorio" runat="server" CssClass="btn btn-primary btn-space" Text="Enviar Relatório" UseSubmitBehavior="false" CommandName="Editar"></asp:Button>
                       </td>
                     </tr>
                   </ItemTemplate>

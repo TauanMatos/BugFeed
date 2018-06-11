@@ -32,6 +32,14 @@ namespace BugFeed.Dashboard.Pesquisador
     {
       if (e.CommandName == "Editar")
         this.EnviarRelatorio(e);
+      else if (e.CommandName == "Ver")
+        this.VerRelatorio(e);
+    }
+
+    private void VerRelatorio(RepeaterCommandEventArgs e)
+    {
+      this.Session["ProgramaRecompensasId"] = e.CommandArgument;
+      this.Response.Redirect(Urls.ProgramaPesquisador);
     }
 
     protected void rptProgramas_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -42,6 +50,7 @@ namespace BugFeed.Dashboard.Pesquisador
         
         var tdQntRelatorios = (HtmlTableCell)e.Item.FindControl("tdQntRelatorios");
         var tdData = (HtmlTableCell)e.Item.FindControl("tdData");
+        var btVerRelatorio = (Button)e.Item.FindControl("btVerRelatorio");
         var btEnviarRelatorio = (Button)e.Item.FindControl("btEnviarRelatorio");
         //var tdQntRelatorios = (HtmlGenericControl)e.Item.FindControl("tdQntRelatorios");
 
@@ -51,6 +60,7 @@ namespace BugFeed.Dashboard.Pesquisador
         
         tdData.InnerText = programa.DataCriacao.ToShortDateString();
 
+        btVerRelatorio.CommandArgument = programa.ProgramaRecompensasId.ToString();
         btEnviarRelatorio.CommandArgument = programa.ProgramaRecompensasId.ToString();
       }
     }
