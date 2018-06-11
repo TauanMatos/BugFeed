@@ -50,7 +50,8 @@ namespace BugFeed.Dashboard.Pesquisador
             Descricao = this.txtDescricao.Text.Trim(),
             Estado = EstadoRelatorioBug.Enviado,
             Pesquisador = usuario.Pesquisador,
-            Programa = programa
+            Programa = programa,
+            Data = DateTime.Now
           };
 
           unitOfWork.RelatoriosBug.Insert(relatorio);

@@ -28,6 +28,9 @@ namespace BugFeed.Database
     public string Impacto { get; set; }
 
     [Required]
+    public DateTime Data { get; set; }
+
+    [Required]
     public EstadoRelatorioBug Estado { get; set; }
 
     public virtual List<ComentarioRelatorio> Comentarios { get; set; }
