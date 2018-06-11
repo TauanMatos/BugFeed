@@ -11,11 +11,8 @@ namespace BugFeed.DAL
     private PesquisadorRepository pesquisadorRepository;
     private FuncionarioRepository ioFuncionarioRepository;
     private RelatorioBugRepository relatorioBugRepository;
-<<<<<<< HEAD
     private ComentarioRepository ioComentarioRepository;
-=======
     private RecompensaRepository recompensaRepository;
->>>>>>> 07b471b6b6a43f3c459f3e04446ac7558dd28834
 
 
     public ComentarioRepository Comentario
