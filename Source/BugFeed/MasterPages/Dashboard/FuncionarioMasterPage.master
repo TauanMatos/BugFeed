@@ -16,7 +16,7 @@
                 <a href="/Dashboard/Programas/"><i class="icon mdi mdi-collection-text"></i><span>Programas</span></a>
               </li>
               <li>
-                <a href="/Dashboard/Pesquisador/RelatoriosEnviados.aspx"><i class="icon mdi mdi-comment-list"></i><span>Analisar Relatórios</span></a>
+                <a href="/Dashboard/Programas/AnalisarRelatorios.aspx"><i class="icon mdi mdi-comment-list"></i><span>Analisar Relatórios</span></a>
               </li>
               <%--<li>
                 <a href="/Dashboard/Pesquisador/Recompensas.aspx"><i class="icon mdi mdi-money"></i><span>Minhas recompensas</span></a>
