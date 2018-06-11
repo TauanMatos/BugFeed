@@ -14,7 +14,7 @@
                   <asp:TextBox runat="server" ID="txtTitulo" CssClass="form-control" placeholder="Título do Programa"></asp:TextBox>
                 </div>
                 <div class="form-group" style="width: 30%;">
-                  <asp:TextBox runat="server" ID="txtOrcamento" CssClass="form-control currency" placeholder="Orçamento" data-prefix="R$ " data-thousands="." data-decimal="," data-allow-empty="false"></asp:TextBox>
+                  <asp:TextBox runat="server" ID="txtOrcamento" CssClass="form-control currency" placeholder="Orçamento" data-affixes-stay="true" data-prefix="R$ " data-thousands="." data-decimal="," data-allow-empty="false"></asp:TextBox>
                 </div>
                 <%--            <div class="form-group row pt-1 pb-1">
               <div class="col-12 col-sm-8 col-lg-6 form-check mt-2">

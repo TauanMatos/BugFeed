@@ -1,6 +1,7 @@
 ﻿using BugFeed.DAL;
 using BugFeed.Database;
 using BugFeed.Pages;
+using BugFeed.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,10 +51,10 @@ namespace BugFeed.Dashboard.Programas
 
     protected void btSalvar_Click(object sender, EventArgs e)
     {
-      using(UnitOfWork loUnitOfWork = new UnitOfWork())
+      using (UnitOfWork loUnitOfWork = new UnitOfWork())
       {
         RelatorioBug loRelatorio = loUnitOfWork.RelatoriosBug.GetByID(Convert.ToInt32(this.Session["RelatorioBugId"]));
-       
+
         ComentarioRelatorio loComentario = new ComentarioRelatorio();
 
         loComentario.Conteudo = this.txtComentario.Text.Trim();
@@ -64,6 +65,27 @@ namespace BugFeed.Dashboard.Programas
         loComentario.Relatorio = loRelatorio;
 
         loUnitOfWork.Comentario.Insert(loComentario);
+
+      }
+    }
+
+    protected void btPagamento_Click(object sender, EventArgs e)
+    {
+      using (UnitOfWork loUnitOfWork = new UnitOfWork())
+      {
+        RelatorioBug loRelatorio = loUnitOfWork.RelatoriosBug.GetByID(Convert.ToInt32(this.Session["RelatorioBugId"]));
+        Recompensa loRecompensa = new Recompensa();
+
+        loRecompensa.Estado = EstadoRecompensa.ARetirar;
+        loRecompensa.Pagador = loUnitOfWork.Funcionario.FindByUsername(this.User.Identity.Name);
+        loRecompensa.Relatorio = loRelatorio;
+        loRecompensa.Valor = Convert.ToDecimal(this.txtPagamento.Text.Replace(",","").Replace(".","").Replace("R$", ""));
+        loRecompensa.Avaliador = loUnitOfWork.Funcionario.FindByUsername(this.User.Identity.Name);
+
+        loRelatorio.Recompensa = loRecompensa;
+
+        loUnitOfWork.RelatoriosBug.Update(loRelatorio);
+
 
       }
     }

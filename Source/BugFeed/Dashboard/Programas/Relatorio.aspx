@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Dashboard/FuncionarioMasterPage.master" AutoEventWireup="true" CodeBehind="Relatorio.aspx.cs" Inherits="BugFeed.Dashboard.Programas.Relatorio" %>
+﻿<%@ Page Title="Relatório" Language="C#" MasterPageFile="~/MasterPages/Dashboard/FuncionarioMasterPage.master" AutoEventWireup="true" CodeBehind="Relatorio.aspx.cs" Inherits="BugFeed.Dashboard.Programas.Relatorio" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <div class="main-content container-fluid">
@@ -6,6 +6,12 @@
       <div class="col-12">
         <div class="user-info-list card">
           <div class="card-header card-header-divider">
+            <div class="tools">
+              <div class="btn-group btn-hspace">
+                <asp:TextBox runat="server" ID="txtPagamento" CssClass="form-control form-control-sm currency" placeholder="Valor" data-affixes-stay="true" data-prefix="R$ " data-thousands="." data-decimal="," data-allow-empty="false"></asp:TextBox>
+                <asp:Button runat="server" ID="btPagamento" CssClass="btn btn-primary" Text="Pagar Recompensa" OnClick="btPagamento_Click" />
+              </div>
+            </div>
             <asp:Label runat="server" ID="Label1" Text="Título: "></asp:Label>
             <asp:Label runat="server" ID="lblTitulo"></asp:Label>
             <span class="card-subtitle">

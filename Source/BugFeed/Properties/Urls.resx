@@ -138,6 +138,9 @@
   <data name="NovoPrograma" xml:space="preserve">
     <value>~/Dashboard/Programas/Novo.aspx</value>
   </data>
+  <data name="PagamentoRecompensa" xml:space="preserve">
+    <value>~/Dashboard/Programas/Pagamento.aspx</value>
+  </data>
   <data name="ProgramaPesquisador" xml:space="preserve">
     <value>~/Dashboard/Pesquisador/Programa.aspx</value>
   </data>
