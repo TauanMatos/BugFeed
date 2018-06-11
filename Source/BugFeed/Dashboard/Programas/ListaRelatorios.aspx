@@ -22,7 +22,7 @@
             <ItemTemplate>
               <tr>
                 <td><%# Eval("Titulo") %></td>
-                <td><%# Eval("Estado") %></td>
+                <td id="tdEstado" runat="server"></td>
                 <td><%# Eval("Impacto") %></td>
                 <td runat="server" id="tdData"></td>
                 <td class="text-right">
