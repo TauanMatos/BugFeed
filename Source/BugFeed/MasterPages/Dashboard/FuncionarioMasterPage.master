@@ -9,7 +9,6 @@
           <div class="left-sidebar-content">
             <ul class="sidebar-elements">
               <li class="divider">Menu</li>
-<<<<<<< HEAD
               <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span>Dashboard</span></a>
                 <ul class="sub-menu">
                   <li><a href="/Dashboard/Programas/Default.aspx">Programas abertos</a>
@@ -17,7 +16,6 @@
                   <li><a href="/Dashboard/Programas/AnalisarRelatorios.aspx">Analisar relatórios</a>
                   </li>
                 </ul>
-=======
               <li>
                 <a href="/Dashboard/Programas/"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
               </li>
@@ -26,7 +24,6 @@
               </li>
               <li>
                 <a href="/Dashboard/Programas/AnalisarRelatorios.aspx"><i class="icon mdi mdi-comment-list"></i><span>Analisar Relatórios</span></a>
->>>>>>> 07b471b6b6a43f3c459f3e04446ac7558dd28834
               </li>
               <%--<li>
                 <a href="/Dashboard/Pesquisador/Recompensas.aspx"><i class="icon mdi mdi-money"></i><span>Minhas recompensas</span></a>
