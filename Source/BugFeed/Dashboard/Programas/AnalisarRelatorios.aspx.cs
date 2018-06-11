@@ -2,6 +2,7 @@
 using BugFeed.Database;
 using BugFeed.Pages;
 using BugFeed.Pages.Dashboard;
+using BugFeed.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,7 +61,7 @@ namespace BugFeed.Dashboard.Programas
     private void LbRelatorios_Command(object sender, CommandEventArgs e)
     {
       this.Session["ProgramaRecompensasId"] = e.CommandArgument;
-      this.Response.Redirect("");
+      this.Response.Redirect(Urls.ListaRelatorios);
     }
   }
 }
