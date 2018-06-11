@@ -13,6 +13,24 @@ namespace BugFeed.Dashboard.Programas {
     public partial class Relatorio {
         
         /// <summary>
+        /// pnAlerts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnAlerts;
+        
+        /// <summary>
+        /// divPagamento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPagamento;
+        
+        /// <summary>
         /// txtPagamento control.
         /// </summary>
         /// <remarks>
@@ -94,13 +112,13 @@ namespace BugFeed.Dashboard.Programas {
         protected global::System.Web.UI.WebControls.Label lblImpacto;
         
         /// <summary>
-        /// lblDescricao control.
+        /// divContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescricao;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divContent;
         
         /// <summary>
         /// rptComentarios control.
@@ -128,5 +146,32 @@ namespace BugFeed.Dashboard.Programas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btSalvar;
+        
+        /// <summary>
+        /// divAceitar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAceitar;
+        
+        /// <summary>
+        /// btRecusar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btRecusar;
+        
+        /// <summary>
+        /// btAceitar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btAceitar;
     }
 }
