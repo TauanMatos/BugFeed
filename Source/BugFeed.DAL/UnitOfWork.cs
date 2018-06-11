@@ -11,7 +11,18 @@ namespace BugFeed.DAL
     private PesquisadorRepository pesquisadorRepository;
     private FuncionarioRepository ioFuncionarioRepository;
     private RelatorioBugRepository relatorioBugRepository;
+    private ComentarioRepository ioComentarioRepository;
 
+
+    public ComentarioRepository Comentario
+    {
+      get
+      {
+        if (this.ioComentarioRepository == null)
+          this.ioComentarioRepository = new ComentarioRepository(Context);
+        return this.ioComentarioRepository;
+      }
+    }
     public FuncionarioRepository Funcionario
     {
       get

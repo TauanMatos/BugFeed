@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Dashboard/FuncionarioMasterPage.master" AutoEventWireup="true" CodeBehind="AnalisarRelatorios.aspx.cs" Inherits="BugFeed.Dashboard.Programas.AnalisarRelatorios" %>
+﻿<%@ Page Title="Analisar Relatórios" Language="C#" MasterPageFile="~/MasterPages/Dashboard/FuncionarioMasterPage.master" AutoEventWireup="true" CodeBehind="AnalisarRelatorios.aspx.cs" Inherits="BugFeed.Dashboard.Programas.AnalisarRelatorios" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <div class="main-content container-fluid">

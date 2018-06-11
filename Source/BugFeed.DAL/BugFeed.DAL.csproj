@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComentarioRepository.cs" />
     <Compile Include="FuncionarioRepository.cs" />
     <Compile Include="GenericRepository.cs" />
     <Compile Include="PesquisadorRepository.cs" />
