@@ -46,7 +46,7 @@
                 <td runat="server" id="tdData"></td>
                 <td class="text-right">
                   <div class="btn-group btn-hspace">
-                    <asp:LinkButton runat="server" ID="lbRelatorios" CssClass="btn btn-primary" Text="Relatórios"></asp:LinkButton>
+                    <asp:LinkButton runat="server" ID="lbRelatorios" CssClass="btn btn-secondary" Text="Relatórios"></asp:LinkButton>
                   </div>
                 </td>
               </tr>

@@ -61,6 +61,15 @@ namespace BugFeed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Programas/AnalisarRelatorios.aspx.
+        /// </summary>
+        internal static string AnalisarRelatorio {
+            get {
+                return ResourceManager.GetString("AnalisarRelatorio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/Dashboard/.
         /// </summary>
         internal static string Dashboard {
@@ -97,6 +106,15 @@ namespace BugFeed.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Programas/ListaRelatorios.aspx.
+        /// </summary>
+        internal static string ListaRelatorios {
+            get {
+                return ResourceManager.GetString("ListaRelatorios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ~/Dashboard/Programas/Novo.aspx.
         /// </summary>
         internal static string NovoPrograma {
@@ -111,6 +129,15 @@ namespace BugFeed.Properties {
         internal static string ProgramasAbertos {
             get {
                 return ResourceManager.GetString("ProgramasAbertos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~/Dashboard/Programas/Relatorio.aspx.
+        /// </summary>
+        internal static string Relatorio {
+            get {
+                return ResourceManager.GetString("Relatorio", resourceCulture);
             }
         }
         

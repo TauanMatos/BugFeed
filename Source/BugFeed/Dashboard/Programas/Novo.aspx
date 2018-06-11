@@ -1,11 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Novo.aspx.cs" Inherits="BugFeed.Dashboard.Programas.Novo" MasterPageFile="~/MasterPages/Dashboard/FuncionarioMasterPage.master" Title="Novo Programa" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="MainContent">
-  <div class="main-content container-fluid">
-    <asp:UpdatePanel runat="server">
-      <ContentTemplate>
-        <asp:Panel ID="pnAlerts" runat="server"></asp:Panel>
-
+  <asp:UpdatePanel runat="server">
+    <ContentTemplate>
+      <asp:Panel ID="pnAlerts" runat="server"></asp:Panel>
+      <div class="main-content container-fluid">
         <div class="row">
           <div class="col-md-12">
             <div class="card card-border-color card-border-color-primary">
@@ -36,18 +35,18 @@
                 <div class="row pt-3">
                   <div class="col-sm-12 text-right">
                     <asp:Button runat="server" CssClass="btn btn-space btn-secondary" Text="Cancelar" ID="btCancelar" OnClick="btCancelar_Click" />
-                    <asp:Button runat="server" CssClass="btn btn-space btn-primary" Text="Salvar" ID="btSalvar" OnClick="btSalvar_Click"/>
+                    <asp:Button runat="server" CssClass="btn btn-space btn-primary" Text="Salvar" ID="btSalvar" OnClick="btSalvar_Click" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
-      </ContentTemplate>
-      <Triggers>
-        <asp:AsyncPostBackTrigger ControlID="btSalvar" />
-        <asp:AsyncPostBackTrigger ControlID="btCancelar" />
-      </Triggers>
-    </asp:UpdatePanel>
+      </div>
+    </ContentTemplate>
+    <Triggers>
+      <asp:AsyncPostBackTrigger ControlID="btSalvar" />
+      <asp:AsyncPostBackTrigger ControlID="btCancelar" />
+    </Triggers>
+  </asp:UpdatePanel>
 </asp:Content>
