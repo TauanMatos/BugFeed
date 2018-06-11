@@ -300,6 +300,7 @@
     <Content Include="Dashboard\Pesquisador\Profile.aspx" />
     <Content Include="Dashboard\Pesquisador\Programa.aspx" />
     <Content Include="Dashboard\Pesquisador\Recompensas.aspx" />
+    <Content Include="Dashboard\Pesquisador\RelatoriosEnviados.aspx" />
     <Content Include="Dashboard\Programas\AnalisarRelatorios.aspx" />
     <Content Include="Dashboard\Pesquisador\ProgramasAbertos.aspx" />
     <Content Include="Dashboard\Programas\Default.aspx" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="Dashboard\Pesquisador\Recompensas.aspx.designer.cs">
       <DependentUpon>Recompensas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\RelatoriosEnviados.aspx.cs">
+      <DependentUpon>RelatoriosEnviados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Pesquisador\RelatoriosEnviados.aspx.designer.cs">
+      <DependentUpon>RelatoriosEnviados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Programas\AnalisarRelatorios.aspx.cs">
       <DependentUpon>AnalisarRelatorios.aspx</DependentUpon>
