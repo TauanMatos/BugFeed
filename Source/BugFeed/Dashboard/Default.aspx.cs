@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed.Dashboard
 {
-  public partial class Default : WebForm
+  public partial class Default : DashboardPage
   {
     protected override void OnInit(EventArgs e)
     {

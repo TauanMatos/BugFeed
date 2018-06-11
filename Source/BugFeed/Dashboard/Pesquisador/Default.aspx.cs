@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace BugFeed.Dashboard.Pesquisador
 {
-  public partial class Default : WebForm
+  public partial class Default : DashboardPage
   {
     protected void Page_Load(object sender, EventArgs e)
     {
