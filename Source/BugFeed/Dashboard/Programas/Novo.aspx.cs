@@ -27,7 +27,7 @@ namespace BugFeed.Dashboard.Programas
           programa.Estado = EstadoProgramaRecompensa.Ativo;
           programa.Descricao = this.txtDescricao.Text.Trim();
           programa.Empresa = usuario.Funcionario.Grupo.Empresa;
-          programa.Orcamento = Convert.ToDecimal(this.txtOrcamento.Text);
+          programa.Orcamento = Convert.ToDecimal(this.txtOrcamento.Text.Replace(",","").Replace(".", "").Replace("R$", ""));
           programa.DataCriacao = DateTime.Now;
 
           unitOfWork.ProgramasRecompensas.Insert(programa);
